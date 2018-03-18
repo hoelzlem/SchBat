@@ -55,6 +55,8 @@
 #include <stdlib.h>
 #include <sys/attribs.h>
 
+#include <main.h>
+
 #ifdef __cplusplus  // Provide C++ Compatibility
 
     extern "C" {
@@ -65,18 +67,25 @@
   Section: Data Types
 */
 
+//! Current ADC measurements after oversampling
+//!
+//! Index order as in ADC1_CHANNEL
+//! 16x oversampling and conversion to mV
+//! Range: 0 .. 2500 mV
+extern uint16_t ADC1_measured_voltage_mV[5];
+
 /** ADC Channel Definition
- 
- @Summary 
+
+ @Summary
    Defines the channels available for conversion
- 
+
  @Description
    This routine defines the channels that are available for the module to use.
- 
+
  Remarks:
    None
  */
-typedef enum 
+typedef enum
 {
     ADC1_I_MEAS =  0x2,
     ADC1_T_MEAS =  0x3,
@@ -95,10 +104,10 @@ typedef enum
     This function initializes ADC instance : 1
 
   @Description
-    This routine initializes the ADC driver and makes it ready 
-    for clients to open and use it. It also initializes any internal data 
+    This routine initializes the ADC driver and makes it ready
+    for clients to open and use it. It also initializes any internal data
     structures.
-    This routine must be called before any other ADC routine is called. 
+    This routine must be called before any other ADC routine is called.
 
   @Preconditions
     None.
@@ -122,7 +131,7 @@ typedef enum
         ADC1_Stop();
         while(!ADC1_IsConversionComplete())
         {
-            ADC1_Tasks();   
+            ADC1_Tasks();
         }
         conversion = ADC1_ConversionResultGet();
     </code>
@@ -137,9 +146,9 @@ void ADC1_Initialize (void);
 
   @Description
     This routine is used to start the sampling manually.
- 
+
   @Preconditions
-    ADC1_Initialize() function should have been called 
+    ADC1_Initialize() function should have been called
     before calling this function.
 
   @Param
@@ -162,9 +171,9 @@ void ADC1_Start(void);
   @Description
     This routine is used to stop the sampling manually before conversion
     is triggered.
- 
+
   @Preconditions
-    ADC1_Initialize() function should have been 
+    ADC1_Initialize() function should have been
     called before calling this function.
 
   @Param
@@ -186,12 +195,12 @@ void ADC1_Stop(void);
   @Description
     This routine is used to get the analog to digital converted values in a
     buffer. This routine gets converted values from multiple channels.
- 
+
   @Preconditions
-    This routine returns the buffer containing the conversion values only after 
-    the conversion is complete. Completion status conversion can be checked using 
+    This routine returns the buffer containing the conversion values only after
+    the conversion is complete. Completion status conversion can be checked using
     ADC1_IsConversionComplete() routine.
- 
+
   @Param
     Buffer Address.
 
@@ -225,20 +234,20 @@ void ADC1_ConversionResultBufferGet(uint32_t *buffer);
   @Description
     This routine is used to get the analog to digital converted value. This
     routine gets converted values from the channel specified.
- 
+
   @Preconditions
     The channel required must be selected before calling this routine using
-    ADC1_ChannelSelect(channel). This routine returns the 
-    conversion value only after the conversion is complete. Completion status 
+    ADC1_ChannelSelect(channel). This routine returns the
+    conversion value only after the conversion is complete. Completion status
     conversion can be checked using ADC1_IsConversionComplete()
     routine.
-   
+
   @Returns
     Returns the buffer containing the conversion value.
 
   @Param
     None.
-  
+
   @Example
     Refer to ADC1_Initialize() for an example
  */
@@ -253,17 +262,17 @@ uint32_t ADC1_ConversionResultGet(void);
     This routine is used to determine if conversion is completed. This routine
     returns the value of the DONE bit. When conversion is complete the routine
     returns 1. It returns 0 otherwise.
- 
+
   @Preconditions
-    ADC1_Initialize() function should have been 
+    ADC1_Initialize() function should have been
     called before calling this function.
- 
+
   @Returns
     Returns true if conversion is completed
 
   @Param
     None
-  
+
   @Example
     Refer to ADC1_Initialize() for an example
  */
@@ -276,25 +285,30 @@ bool ADC1_IsConversionComplete( void );
 
   @Description
     This routine is used to select desired channel for conversion.
-  
+
   @Preconditions
-    ADC1_Initialize() function should have been 
+    ADC1_Initialize() function should have been
     called before calling this function.
- 
+
   @Returns
     None
 
   @Param
     Pass in required channel from the ADC1_CHANNEL list
-  
+
   @Example
     Refer to ADC1_Initialize() for an example
- 
+
 */
 
 void ADC1_ChannelSelect( ADC1_CHANNEL channel );
 
-       
+//! Update measurements
+//!
+//! Do oversampling and conversion to measured voltage in mV
+void ADC1_update_measurements(void);
+
+
 #ifdef __cplusplus  // Provide C++ Compatibility
 
     }
@@ -302,7 +316,7 @@ void ADC1_ChannelSelect( ADC1_CHANNEL channel );
 #endif
 
 #endif //_ADC1_H
-    
+
 /**
  End of File
 */
