@@ -49,17 +49,17 @@
 #include "pin_manager.h"
 #include <stdint.h>
 #include <stdbool.h>
+#include "tmr3.h"
+#include "oc4.h"
+#include "tmr2.h"
+#include "oc5.h"
+#include "uart1.h"
+#include "spi1.h"
+#include "coretimer.h"
+#include "i2c1.h"
+#include "interrupt_manager.h"
 #include "adc1.h"
 #include "oc1.h"
-#include "oc4.h"
-#include "oc5.h"
-#include "spi1.h"
-#include "interrupt_manager.h"
-#include "i2c1.h"
-#include "dma.h"
-#include "uart1.h"
-#include "tmr2.h"
-#include "tmr3.h"
 
 #define _XTAL_FREQ  48000000UL
 

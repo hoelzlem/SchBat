@@ -17,12 +17,12 @@
         <itemPath>mcc_generated_files/oc4.h</itemPath>
         <itemPath>mcc_generated_files/oc5.h</itemPath>
         <itemPath>mcc_generated_files/spi1.h</itemPath>
-        <itemPath>mcc_generated_files/dma.h</itemPath>
         <itemPath>mcc_generated_files/tmr2.h</itemPath>
         <itemPath>mcc_generated_files/tmr3.h</itemPath>
+        <itemPath>mcc_generated_files/coretimer.h</itemPath>
+        <itemPath>mcc_generated_files/drivers/uart.h</itemPath>
       </logicalFolder>
-      <itemPath>system.h</itemPath>
-      <itemPath>user.h</itemPath>
+      <itemPath>main.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -44,16 +44,12 @@
         <itemPath>mcc_generated_files/oc4.c</itemPath>
         <itemPath>mcc_generated_files/oc5.c</itemPath>
         <itemPath>mcc_generated_files/spi1.c</itemPath>
-        <itemPath>mcc_generated_files/dma.c</itemPath>
         <itemPath>mcc_generated_files/tmr2.c</itemPath>
         <itemPath>mcc_generated_files/tmr3.c</itemPath>
+        <itemPath>mcc_generated_files/coretimer.c</itemPath>
+        <itemPath>mcc_generated_files/drivers/uart.c</itemPath>
       </logicalFolder>
-      <itemPath>configuration_bits.c</itemPath>
-      <itemPath>exceptions.c</itemPath>
-      <itemPath>interrupts.c</itemPath>
       <itemPath>main.c</itemPath>
-      <itemPath>system.c</itemPath>
-      <itemPath>user.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -61,10 +57,10 @@
       <itemPath>Makefile</itemPath>
       <itemPath>MyConfig.mc3</itemPath>
     </logicalFolder>
-    <itemPath>getting_started.txt</itemPath>
-    <itemPath>legal_disclaimer.txt</itemPath>
-    <itemPath>project_information.txt</itemPath>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="NewConfiguration" type="2">

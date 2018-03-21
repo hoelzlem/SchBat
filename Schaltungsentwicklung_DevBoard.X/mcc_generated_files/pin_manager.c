@@ -64,13 +64,13 @@ void PIN_MANAGER_Initialize(void)
      ***************************************************************************/
     LATA = 0x0000;
     LATB = 0x0000;
-    LATC = 0x0000;
+    LATC = 0x0060;
 
     /****************************************************************************
      * Setting the GPIO Direction SFR(s)
      ***************************************************************************/
     TRISA = 0x078F;
-    TRISB = 0x7FFF;
+    TRISB = 0xFFFF;
     TRISC = 0x0207;
 
     /****************************************************************************
@@ -94,7 +94,7 @@ void PIN_MANAGER_Initialize(void)
      * Setting the Analog/Digital Configuration SFR(s)
      ***************************************************************************/
     ANSELA = 0x0003;
-    ANSELB = 0x000F;
+    ANSELB = 0x200F;
     ANSELC = 0x0005;
 
     /****************************************************************************
@@ -103,12 +103,10 @@ void PIN_MANAGER_Initialize(void)
     SYSTEM_RegUnlock(); // unlock PPS
     CFGCONbits.IOLOCK = 0;
 
-    RPC3Rbits.RPC3R = 0x0005;   //RC3->OC4:OC4;
-    RPA4Rbits.RPA4R = 0x0006;   //RA4->OC5:OC5;
-    U1RXRbits.U1RXR = 0x0003;   //RB13->UART1:U1RX;
     RPC5Rbits.RPC5R = 0x0005;   //RC5->OC1:OC1;
+    RPC3Rbits.RPC3R = 0x0005;   //RC3->OC4:OC4;
     SDI1Rbits.SDI1R = 0x0003;   //RB11->SPI1:SDI1;
-    RPB15Rbits.RPB15R = 0x0001;   //RB15->UART1:U1TX;
+    RPA4Rbits.RPA4R = 0x0006;   //RA4->OC5:OC5;
     RPC8Rbits.RPC8R = 0x0003;   //RC8->SPI1:SDO1;
 
     CFGCONbits.IOLOCK = 1; // lock   PPS

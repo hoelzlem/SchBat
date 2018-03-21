@@ -1,26 +1,27 @@
-/**
-  System Interrupts Generated Driver File 
 
-  @Company:
+/**
+  CORETIMER Generated Driver API Header File
+
+  Company:
     Microchip Technology Inc.
 
-  @File Name:
-    interrupt_manager.h
+  File Name:
+    coretimer.h
 
-  @Summary:
-    This is the generated driver implementation file for setting up the
-    interrupts using PIC32MX MCUs
+  @Summary
+    This is the generated header file for the CORETIMER driver using PIC32MX MCUs
 
-  @Description:
-    This source file provides implementations for PIC32MX MCUs interrupts.
-    Generation Information : 
+  @Description
+    This header file provides APIs for driver for CORETIMER.
+    Generation Information :
         Product Revision  :  PIC32MX MCUs - pic32mx : v1.35
         Device            :  PIC32MX150F128D
-        Version           :  1.01
+        Driver Version    :  0.5
     The generated drivers are tested against the following:
         Compiler          :  XC32 1.42
-        MPLAB             :  MPLAB X 3.55
+        MPLAB 	          :  MPLAB X 3.55
 */
+
 /*
     (c) 2016 Microchip Technology Inc. and its subsidiaries. You may use this
     software and any derivatives exclusively with Microchip products.
@@ -43,35 +44,62 @@
     TERMS.
 */
 
-/**
-    Section: Includes
-*/
-#include <xc.h>
+#ifndef _CORETIMER_H
+#define _CORETIMER_H
+
 
 /**
-    void INTERRUPT_Initialize (void)
+ Section: Included Files
 */
-void INTERRUPT_Initialize (void)
-{    
-    //    CTI: Core Timer
-    //    Priority: 1
-    //    SubPriority: 0
-        IPC0bits.CTIP = 1;
-        IPC0bits.CTIS = 0;
-    //    ADI: ADC1 Convert Done
-    //    Priority: 1
-    //    SubPriority: 0
-        IPC5bits.AD1IP = 1;
-        IPC5bits.AD1IS = 0;
-    //    I2CMI: I2C1 Master Event
-    //    Priority: 1
-    //    SubPriority: 0
-        IPC8bits.I2C1IP = 1;
-        IPC8bits.I2C1IS = 0;
 
-    //  Enable the multi vector
-    INTCONbits.MVEC = 1;
-    //  Enable Global Interrupts 
-    __builtin_mtc0(12,0,(__builtin_mfc0(12,0) | 0x0001));
+#include <stdbool.h>
+#include <stdint.h>
+#include <sys/attribs.h>
 
-}
+/**
+ * @Param
+    none
+
+ * @Returns
+    none
+
+ * @Description
+    Initializes core timer with appropriate count 
+ *  and compare value as provided in MCC GUI
+
+ * @Example
+    CORETIMER_Initialize();
+ 
+*/
+
+void CORETIMER_Initialize(void);
+
+/**
+ * @Param
+    none
+
+ * @Returns
+    Core Timer 32-bit count value.
+
+ * @Description
+ *  Returns the current Core Timer Count.
+
+ * @Example
+    uint32_t count;
+    count = CORETIMER_CountGet();
+
+ */
+
+uint32_t CORETIMER_CountGet(void);
+
+#ifdef __cplusplus  // Provide C++ Compatibility
+
+    }
+
+#endif
+
+#endif //_CORETIMER_H
+    
+/**
+ End of File
+*/

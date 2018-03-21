@@ -51,27 +51,22 @@
 #include <xc.h>
 #include "adc1.h"
 
-//! Buffer for DMA operation destination
-//!
-//! Order as defined in ADC1_CHANNEL
-uint16_t sample_buffer[80] = {0};
-
-uint16_t ADC1_measured_voltage_mV[5] = {0};
-
 /**
   Section: Driver Interface
 */
 
+ADC_Sample_Buffer_t ADC_sample_buffer = {0};
+
 void ADC1_Initialize (void)
 {
-    // ASAM enabled; DONE disabled; CLRASAM disabled; FORM Integer 16 bit; SAMP disabled; SSRC Clearing sample bit ends sampling and starts conversion; SIDL disabled; ON enabled;
-   AD1CON1 = 0x8004;
+    // ASAM enabled; DONE disabled; CLRASAM disabled; FORM Integer 16 bit; SAMP disabled; SSRC Internal counter; SIDL disabled; ON enabled; 
+   AD1CON1 = 0x80E4;
 
-    // CSCNA enabled; ALTS disabled; BUFM disabled; SMPI 1; OFFCAL disabled; VCFG VREF+/VREF-;
-   AD1CON2 = 0x6400;
+    // CSCNA enabled; ALTS disabled; BUFM disabled; SMPI 5; OFFCAL disabled; VCFG VREF+/VREF-; 
+   AD1CON2 = 0x6410;
 
-    // SAMC 0; ADRC PBCLK; ADCS 0;
-   AD1CON3 = 0x0;
+    // SAMC 25; ADRC PBCLK; ADCS 1; 
+   AD1CON3 = 0x1901;
 
     // CH0SA AN0; CH0SB AN0; CH0NB Vrefl; CH0NA Vrefl;
    AD1CHS = 0x0;
@@ -100,8 +95,8 @@ void ADC1_ConversionResultBufferGet(uint32_t *buffer)
     uint32_t *ADC32Ptr;
 
     ADC32Ptr = (uint32_t *)&(ADC1BUF0);
-
-    for(count=0; count<=1; count++)
+    
+    for(count=0; count<=5; count++)
     {
         buffer[count] = (uint32_t)*ADC32Ptr;
         ADC32Ptr = ADC32Ptr + 4;
@@ -123,7 +118,7 @@ void ADC1_ChannelSelect( ADC1_CHANNEL channel )
     AD1CHS = channel << 16;
 }
 
-void ADC1_update_measurements (void)
+/*void ADC1_update_measurements (void)
 {
     uint it_ch, it_sample;
     uint oversampled_value;
@@ -143,12 +138,23 @@ void ADC1_update_measurements (void)
         // Neglect - 1 for easier computation by bitshift
         ADC1_measured_voltage_mV[it_ch] = (oversampled_value * reference_voltage_mV) >> 11;
     }
-}
+}*/
 
 void __ISR ( _ADC_VECTOR, IPL1AUTO ) ADC_1 (void)
 {
     // Read ADC Buffer since the interrupt is persistent
-
+    static uint it_sequence = 0;
+    
+    ADC_sample_buffer.I_MEAS[it_sequence] = ADC1BUF0;
+    ADC_sample_buffer.T_MEAS[it_sequence] = ADC1BUF1;
+    ADC_sample_buffer.U_MEAS[it_sequence] = ADC1BUF2;
+    ADC_sample_buffer.EXT_AD_1[it_sequence] = ADC1BUF3;
+    ADC_sample_buffer.EXT_AD_2[it_sequence] = ADC1BUF4;
+    
+    it_sequence += 1;
+    if(it_sequence >=16)
+        it_sequence = 0;
+    
     // clear ADC interrupt flag
     IFS0CLR= 1 << _IFS0_AD1IF_POSITION;
 }

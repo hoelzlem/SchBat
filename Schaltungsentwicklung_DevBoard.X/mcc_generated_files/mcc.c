@@ -60,7 +60,7 @@
 #pragma config IESO = ON    // Internal/External Switch Over->Enabled
 #pragma config POSCMOD = XT    // Primary Oscillator Configuration->XT osc mode
 #pragma config OSCIOFNC = OFF    // CLKO Output Signal Active on the OSCO Pin->Disabled
-#pragma config FPBDIV = DIV_8    // Peripheral Clock Divisor->Pb_Clk is Sys_Clk/8
+#pragma config FPBDIV = DIV_2    // Peripheral Clock Divisor->Pb_Clk is Sys_Clk/2
 #pragma config FCKSM = CSDCMD    // Clock Switching and Monitor Selection->Clock Switch Disable, FSCM Disabled
 #pragma config WDTPS = PS1048576    // Watchdog Timer Postscaler->1:1048576
 #pragma config WINDIS = OFF    // Watchdog Timer Window Enable->Watchdog Timer is in Non-Window Mode
@@ -99,6 +99,7 @@ void SYSTEM_Initialize(void)
 {
     PIN_MANAGER_Initialize();
     OSCILLATOR_Initialize();
+    CORETIMER_Initialize();
     SPI1_Initialize();
     OC4_Initialize();
     UART1_Initialize();
@@ -108,7 +109,6 @@ void SYSTEM_Initialize(void)
     I2C1_Initialize();
     ADC1_Initialize();
     TMR3_Initialize();
-    DMA_Initialize();
     INTERRUPT_Initialize();
 
 }
@@ -128,8 +128,8 @@ void SYSTEM_RegLock(void)
 void OSCILLATOR_Initialize(void)
 {
     SYSTEM_RegUnlock(); 
-    // CF no clock failure; COSC PRIPLL; PLLODIV DIV_2; PBDIVRDY disabled; SLOCK out of lock; FRCDIV FRC/1; SLPEN Idle on WAIT instruction; NOSC PRIPLL; PLLMULT MUL_24; SOSCEN disabled; PBDIV DIV_8; CLKLOCK unlocked; OSWEN Switch is Complete; SOSCRDY disabled; 
-    OSCCON = 0x81F3300;
+    // CF no clock failure; COSC PRIPLL; PLLODIV DIV_2; PBDIVRDY disabled; SLOCK out of lock; FRCDIV FRC/1; SLPEN Idle on WAIT instruction; NOSC PRIPLL; PLLMULT MUL_24; SOSCEN disabled; PBDIV DIV_2; CLKLOCK unlocked; OSWEN Switch is Complete; SOSCRDY disabled; 
+    OSCCON = 0x80F3300;
     SYSTEM_RegLock();
     // TUN Center Frequency; 
     OSCTUN = 0x0;

@@ -1,26 +1,27 @@
-/**
-  System Interrupts Generated Driver File 
 
-  @Company:
+/**
+  CORETIMER Generated Driver File 
+
+  @Company
     Microchip Technology Inc.
 
-  @File Name:
-    interrupt_manager.h
+  @File Name
+    coretimer.c
 
-  @Summary:
-    This is the generated driver implementation file for setting up the
-    interrupts using PIC32MX MCUs
+  @Summary
+    This is the generated driver implementation file for the CORETIMER driver using PIC32MX MCUs
 
-  @Description:
-    This source file provides implementations for PIC32MX MCUs interrupts.
+  @Description
+    This header file provides implementations for driver APIs for CORETIMER. 
     Generation Information : 
         Product Revision  :  PIC32MX MCUs - pic32mx : v1.35
         Device            :  PIC32MX150F128D
-        Version           :  1.01
+        Driver Version    :  0.5
     The generated drivers are tested against the following:
         Compiler          :  XC32 1.42
         MPLAB             :  MPLAB X 3.55
 */
+
 /*
     (c) 2016 Microchip Technology Inc. and its subsidiaries. You may use this
     software and any derivatives exclusively with Microchip products.
@@ -44,34 +45,45 @@
 */
 
 /**
-    Section: Includes
+  Section: Included Files
 */
+
 #include <xc.h>
+#include "coretimer.h"
 
 /**
-    void INTERRUPT_Initialize (void)
+  Section: Driver Interface
 */
-void INTERRUPT_Initialize (void)
-{    
-    //    CTI: Core Timer
-    //    Priority: 1
-    //    SubPriority: 0
-        IPC0bits.CTIP = 1;
-        IPC0bits.CTIS = 0;
-    //    ADI: ADC1 Convert Done
-    //    Priority: 1
-    //    SubPriority: 0
-        IPC5bits.AD1IP = 1;
-        IPC5bits.AD1IS = 0;
-    //    I2CMI: I2C1 Master Event
-    //    Priority: 1
-    //    SubPriority: 0
-        IPC8bits.I2C1IP = 1;
-        IPC8bits.I2C1IS = 0;
 
-    //  Enable the multi vector
-    INTCONbits.MVEC = 1;
-    //  Enable Global Interrupts 
-    __builtin_mtc0(12,0,(__builtin_mfc0(12,0) | 0x0001));
+void CORETIMER_Initialize(void)
+{
+   // Set the count value
+   _CP0_SET_COUNT(0x0); 
+   // Set the compare value
+   _CP0_SET_COMPARE(0x960); 
+   // Enable the interrupt
+   IFS0CLR= 1 << _IFS0_CTIF_POSITION;
+   IEC0bits.CTIE = true;
+}
+
+uint32_t CORETIMER_CountGet()
+{
+   return _CP0_GET_COUNT();
+}
+
+void __ISR(_CORE_TIMER_VECTOR, IPL1AUTO) _coreTimerHandler()
+{
+   uint32_t static compare = 0x960;
+
+   // Update the compare value
+   compare = compare + (0x960 - 0x0);
+   _CP0_SET_COMPARE(compare);
+
+   IFS0CLR= 1 << _IFS0_CTIF_POSITION;
+   // Add your custom code here
 
 }
+
+/**
+ End of File
+*/

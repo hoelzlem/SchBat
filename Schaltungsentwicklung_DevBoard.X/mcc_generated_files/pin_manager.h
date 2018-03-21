@@ -2409,11 +2409,11 @@
   @Example
     <code>
     // Set RC4 high (1)
-    LED_EN_SetHigh();
+    DETECT_5V_SetHigh();
     </code>
 
 */
-#define LED_EN_SetHigh()          LATCbits.LATC4 = 1
+#define DETECT_5V_SetHigh()          LATCbits.LATC4 = 1
 /**
   @Summary
     Sets the GPIO pin, RC4, low using LATCbits.LATC4.
@@ -2433,11 +2433,11 @@
   @Example
     <code>
     // Set RC4 low (0)
-    LED_EN_SetLow();
+    DETECT_5V_SetLow();
     </code>
 
 */
-#define LED_EN_SetLow()           LATCbits.LATC4 = 0
+#define DETECT_5V_SetLow()           LATCbits.LATC4 = 0
 /**
   @Summary
     Toggles the GPIO pin, RC4, using LATCbits.LATC4.
@@ -2457,11 +2457,11 @@
   @Example
     <code>
     // Toggle RC4
-    LED_EN_Toggle();
+    DETECT_5V_Toggle();
     </code>
 
 */
-#define LED_EN_Toggle()           LATCbits.LATC4 ^= 1
+#define DETECT_5V_Toggle()           LATCbits.LATC4 ^= 1
 /**
   @Summary
     Reads the value of the GPIO pin, RC4.
@@ -2483,11 +2483,11 @@
     uint16_t portValue;
 
     // Read RC4
-    postValue = LED_EN_GetValue();
+    postValue = DETECT_5V_GetValue();
     </code>
 
 */
-#define LED_EN_GetValue()         PORTCbits.RC4
+#define DETECT_5V_GetValue()         PORTCbits.RC4
 /**
   @Summary
     Configures the GPIO pin, RC4, as an input.
@@ -2507,11 +2507,11 @@
   @Example
     <code>
     // Sets the RC4 as an input
-    LED_EN_SetDigitalInput();
+    DETECT_5V_SetDigitalInput();
     </code>
 
 */
-#define LED_EN_SetDigitalInput()  TRISCbits.TRISC4 = 1
+#define DETECT_5V_SetDigitalInput()  TRISCbits.TRISC4 = 1
 /**
   @Summary
     Configures the GPIO pin, RC4, as an output.
@@ -2531,11 +2531,11 @@
   @Example
     <code>
     // Sets the RC4 as an output
-    LED_EN_SetDigitalOutput();
+    DETECT_5V_SetDigitalOutput();
     </code>
 
 */
-#define LED_EN_SetDigitalOutput() TRISCbits.TRISC4 = 0
+#define DETECT_5V_SetDigitalOutput() TRISCbits.TRISC4 = 0
 /**
   @Summary
     Sets the GPIO pin, RC6, high using LATCbits.LATC6.

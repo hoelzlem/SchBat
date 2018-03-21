@@ -55,7 +55,7 @@
 #include <stdlib.h>
 #include <sys/attribs.h>
 
-#include <main.h>
+#include "../main.h"
 
 #ifdef __cplusplus  // Provide C++ Compatibility
 
@@ -67,12 +67,6 @@
   Section: Data Types
 */
 
-//! Current ADC measurements after oversampling
-//!
-//! Index order as in ADC1_CHANNEL
-//! 16x oversampling and conversion to mV
-//! Range: 0 .. 2500 mV
-extern uint16_t ADC1_measured_voltage_mV[5];
 
 /** ADC Channel Definition
 
@@ -94,6 +88,14 @@ typedef enum
     ADC1_EXT_AD_2 =  0x6,
     ADC1_MAX_CHANNEL_COUNT = 5
 } ADC1_CHANNEL;
+
+typedef struct {
+    uint16_t I_MEAS [16];
+    uint16_t T_MEAS [16];
+    uint16_t U_MEAS [16];
+    uint16_t EXT_AD_1 [16];
+    uint16_t EXT_AD_2 [16];
+} ADC_Sample_Buffer_t;
 
 /**
   Section: Interface Routines
