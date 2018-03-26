@@ -1,4 +1,6 @@
 # VS Code configuration
 .vscode/**
+
+# MPLAB build directories
 **/build/**
 **/dist/**
