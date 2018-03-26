@@ -48,6 +48,10 @@
   Section: Included Files
 */
 
+#include "../main.h"
+
+#include <stdint.h>
+
 #include <xc.h>
 #include "adc1.h"
 
@@ -59,24 +63,25 @@ ADC_Sample_Buffer_t ADC_sample_buffer = {0};
 
 void ADC1_Initialize (void)
 {
-    // ASAM enabled; DONE disabled; CLRASAM disabled; FORM Integer 16 bit; SAMP disabled; SSRC Internal counter; SIDL disabled; ON enabled; 
-   AD1CON1 = 0x80E4;
+    // ASAM enabled; DONE disabled; CLRASAM disabled; FORM Integer 16 bit; SAMP disabled; SSRC Internal counter; SIDL disabled; ON disabled; 
+   AD1CON1 = 0xE4;
 
-    // CSCNA enabled; ALTS disabled; BUFM disabled; SMPI 5; OFFCAL disabled; VCFG VREF+/VREF-; 
-   AD1CON2 = 0x6410;
+    // CSCNA enabled; ALTS disabled; BUFM disabled; SMPI 5; OFFCAL disabled; VCFG VREF+/AVSS; 
+   AD1CON2 = 0x2410;
 
     // SAMC 25; ADRC PBCLK; ADCS 1; 
    AD1CON3 = 0x1901;
 
-    // CH0SA AN0; CH0SB AN0; CH0NB Vrefl; CH0NA Vrefl;
-   AD1CHS = 0x0;
+    // CH0SA AN5; CH0SB AN0; CH0NB Vrefl; CH0NA Vrefl; 
+   AD1CHS = 0x50000;
 
-    // CSSL15 disabled; CSSL14 disabled; CSSL11 disabled; CSSL10 disabled; CSSL13 disabled; CSSL9 disabled; CSSL12 disabled; CSSL0 disabled; CSSL8 disabled; CSSL7 disabled; CSSL6 enabled; CSSL5 enabled; CSSL4 enabled; CSSL3 enabled; CSSL2 enabled; CSSL1 disabled;
+    // CSSL15 disabled; CSSL14 disabled; CSSL11 disabled; CSSL10 disabled; CSSL13 disabled; CSSL9 disabled; CSSL12 disabled; CSSL0 disabled; CSSL8 disabled; CSSL7 disabled; CSSL6 enabled; CSSL5 enabled; CSSL4 enabled; CSSL3 enabled; CSSL2 enabled; CSSL1 disabled; 
    AD1CSSL = 0x7C;
-
 
    // Enabling ADC1 interrupt.
    IEC0bits.AD1IE = 1;
+   
+    AD1CON1bits.ADON = 1;
 }
 
 void ADC1_Start(void)
@@ -110,7 +115,7 @@ uint32_t ADC1_ConversionResultGet(void)
 
 bool ADC1_IsConversionComplete( void )
 {
-    return AD1CON1bits.DONE; //Wait for conversion to complete
+    return AD1CON1bits.DONE; //Wait for conversion to complete   
 }
 
 void ADC1_ChannelSelect( ADC1_CHANNEL channel )
@@ -118,32 +123,11 @@ void ADC1_ChannelSelect( ADC1_CHANNEL channel )
     AD1CHS = channel << 16;
 }
 
-/*void ADC1_update_measurements (void)
-{
-    uint it_ch, it_sample;
-    uint oversampled_value;
-
-    // Iterate over channels
-    for (it_ch = 0; it_ch < ADC1_MAX_CHANNEL_COUNT; it_ch += 1) {
-        oversampled_value = 0;
-        // Accumulate samples
-        // 16 per channel -> accumulator has now ENOB = ENOB_ADC + bits_Oversampling = ENOB_ADC + ld(16) / 2 = 9 + 2 = 11 b
-        for (it_sample = it_ch; it_sample < 80; it_sample += ADC1_MAX_CHANNEL_COUNT)
-            oversampled_value += sample_buffer[it_sample];
-        // Shift for correct number of effective bits
-        // Accumulator has 10 b + ld(16) b = 14 used bits -> shift by 3 b to get 11 b
-        oversampled_value >>= 3;
-        // Convert ADC code to voltage
-        // Ui = (ADC_code * Uref) / (2**ENOB - 1)
-        // Neglect - 1 for easier computation by bitshift
-        ADC1_measured_voltage_mV[it_ch] = (oversampled_value * reference_voltage_mV) >> 11;
-    }
-}*/
-
 void __ISR ( _ADC_VECTOR, IPL1AUTO ) ADC_1 (void)
 {
-    // Read ADC Buffer since the interrupt is persistent
     static uint it_sequence = 0;
+    
+    // Read ADC Buffer since the interrupt is persistent
     
     ADC_sample_buffer.I_MEAS[it_sequence] = ADC1BUF0;
     ADC_sample_buffer.T_MEAS[it_sequence] = ADC1BUF1;
@@ -152,9 +136,9 @@ void __ISR ( _ADC_VECTOR, IPL1AUTO ) ADC_1 (void)
     ADC_sample_buffer.EXT_AD_2[it_sequence] = ADC1BUF4;
     
     it_sequence += 1;
-    if(it_sequence >=16)
+    if(it_sequence >= 16)
         it_sequence = 0;
-    
+        
     // clear ADC interrupt flag
     IFS0CLR= 1 << _IFS0_AD1IF_POSITION;
 }

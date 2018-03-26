@@ -56,7 +56,7 @@
 
 // DEVCFG1
 #pragma config FNOSC = PRIPLL    // Oscillator Selection Bits->Primary Osc w/PLL (XT+,HS+,EC+PLL)
-#pragma config FSOSCEN = OFF    // Secondary Oscillator Enable->Disabled
+#pragma config FSOSCEN = ON    // Secondary Oscillator Enable->Enabled
 #pragma config IESO = ON    // Internal/External Switch Over->Enabled
 #pragma config POSCMOD = XT    // Primary Oscillator Configuration->XT osc mode
 #pragma config OSCIOFNC = OFF    // CLKO Output Signal Active on the OSCO Pin->Disabled
@@ -128,8 +128,8 @@ void SYSTEM_RegLock(void)
 void OSCILLATOR_Initialize(void)
 {
     SYSTEM_RegUnlock(); 
-    // CF no clock failure; COSC PRIPLL; PLLODIV DIV_2; PBDIVRDY disabled; SLOCK out of lock; FRCDIV FRC/1; SLPEN Idle on WAIT instruction; NOSC PRIPLL; PLLMULT MUL_24; SOSCEN disabled; PBDIV DIV_2; CLKLOCK unlocked; OSWEN Switch is Complete; SOSCRDY disabled; 
-    OSCCON = 0x80F3300;
+    // CF no clock failure; COSC PRIPLL; PLLODIV DIV_2; PBDIVRDY disabled; SLOCK out of lock; FRCDIV FRC/2; SLPEN Idle on WAIT instruction; NOSC PRIPLL; PLLMULT MUL_24; SOSCEN disabled; PBDIV DIV_2; CLKLOCK unlocked; OSWEN Switch is Complete; SOSCRDY disabled; 
+    OSCCON = 0x90F3300;
     SYSTEM_RegLock();
     // TUN Center Frequency; 
     OSCTUN = 0x0;

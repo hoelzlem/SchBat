@@ -56,11 +56,11 @@
 
 void OC1_Initialize (void)
 {
-    // OC1RS 1200;     
-    OC1RS = 0x4B0;
+    // OC1RS 0;     
+    OC1RS = 0x0;
     
-    // OC1R 1200;     
-    OC1R = 0x4B0;
+    // OC1R 0;     
+    OC1R = 0x0;
     
     // OC32 16-bit Mode; OCM PWM mode fault disabled; SIDL disabled; OCTSEL TMR3; ON enabled;     
     OC1CON = 0x800E;

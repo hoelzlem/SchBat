@@ -56,6 +56,8 @@
 #include <stdint.h>
 #include <sys/attribs.h>
 
+extern uint32_t tick;
+
 /**
  * @Param
     none

@@ -64,23 +64,23 @@ void PIN_MANAGER_Initialize(void)
      ***************************************************************************/
     LATA = 0x0000;
     LATB = 0x0000;
-    LATC = 0x0060;
+    LATC = 0x0040;
 
     /****************************************************************************
      * Setting the GPIO Direction SFR(s)
      ***************************************************************************/
-    TRISA = 0x078F;
-    TRISB = 0xFFFF;
-    TRISC = 0x0207;
+    TRISA = 0x000F;
+    TRISB = 0x2FEF;
+    TRISC = 0x0015;
 
     /****************************************************************************
      * Setting the Weak Pull Up and Weak Pull Down SFR(s)
      ***************************************************************************/
     CNPDA = 0x0000;
     CNPDB = 0x0000;
-    CNPDC = 0x0000;
+    CNPDC = 0x0010;
     CNPUA = 0x0000;
-    CNPUB = 0x0000;
+    CNPUB = 0x0080;
     CNPUC = 0x0000;
 
     /****************************************************************************
@@ -94,8 +94,8 @@ void PIN_MANAGER_Initialize(void)
      * Setting the Analog/Digital Configuration SFR(s)
      ***************************************************************************/
     ANSELA = 0x0003;
-    ANSELB = 0x200F;
-    ANSELC = 0x0005;
+    ANSELB = 0x000F;
+    ANSELC = 0x0001;
 
     /****************************************************************************
      * Set the PPS
@@ -103,10 +103,12 @@ void PIN_MANAGER_Initialize(void)
     SYSTEM_RegUnlock(); // unlock PPS
     CFGCONbits.IOLOCK = 0;
 
-    RPC5Rbits.RPC5R = 0x0005;   //RC5->OC1:OC1;
     RPC3Rbits.RPC3R = 0x0005;   //RC3->OC4:OC4;
-    SDI1Rbits.SDI1R = 0x0003;   //RB11->SPI1:SDI1;
     RPA4Rbits.RPA4R = 0x0006;   //RA4->OC5:OC5;
+    U1RXRbits.U1RXR = 0x0003;   //RB13->UART1:U1RX;
+    RPC5Rbits.RPC5R = 0x0005;   //RC5->OC1:OC1;
+    SDI1Rbits.SDI1R = 0x0003;   //RB11->SPI1:SDI1;
+    RPB15Rbits.RPB15R = 0x0001;   //RB15->UART1:U1TX;
     RPC8Rbits.RPC8R = 0x0003;   //RC8->SPI1:SDO1;
 
     CFGCONbits.IOLOCK = 1; // lock   PPS

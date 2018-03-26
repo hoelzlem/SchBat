@@ -24,14 +24,14 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Schaltungsentwicklung_DevBoard.X
+PROJECTNAME=DevBoard_Neu.X
 
 # Active Configuration
-DEFAULTCONF=NewConfiguration
+DEFAULTCONF=default
 CONF=${DEFAULTCONF}
 
 # All Configurations
-ALLCONFS=NewConfiguration 
+ALLCONFS=default 
 
 
 # build
@@ -45,13 +45,13 @@ ALLCONFS=NewConfiguration
 
 # clobber
 .clobber-impl: .clobber-pre .depcheck-impl
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=NewConfiguration clean
+	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=default clean
 
 
 
 # all
 .all-impl: .all-pre .depcheck-impl
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=NewConfiguration build
+	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=default build
 
 
 

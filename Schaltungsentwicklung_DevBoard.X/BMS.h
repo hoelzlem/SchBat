@@ -8,6 +8,8 @@ typedef struct {
     uint16_t battery_voltage_mV;
     int16_t battery_current_mA;
     int8_t battery_temperature_dgC;
+    uint16_t EXT_ADC_1_mV;
+    uint16_t EXT_ADC_2_mV;
 } Measurements_t;
 
 typedef struct {
@@ -39,3 +41,10 @@ void BMS_init (void);
 //! Must be executed with 1 ms period
 //! Check sensor values against limits and act accordingly
 void BMS_step (void);
+
+//! Update measurements
+//!
+//! Do oversampling and conversion to measured voltage in mV
+void update_measurements(void);
+
+void print_ADC_input_voltages (void);

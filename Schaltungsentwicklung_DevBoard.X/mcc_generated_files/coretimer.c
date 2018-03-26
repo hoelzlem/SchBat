@@ -55,12 +55,14 @@
   Section: Driver Interface
 */
 
+uint32_t tick = 0;
+
 void CORETIMER_Initialize(void)
 {
    // Set the count value
    _CP0_SET_COUNT(0x0); 
    // Set the compare value
-   _CP0_SET_COMPARE(0x960); 
+   _CP0_SET_COMPARE(0x5DC0); 
    // Enable the interrupt
    IFS0CLR= 1 << _IFS0_CTIF_POSITION;
    IEC0bits.CTIE = true;
@@ -73,15 +75,15 @@ uint32_t CORETIMER_CountGet()
 
 void __ISR(_CORE_TIMER_VECTOR, IPL1AUTO) _coreTimerHandler()
 {
-   uint32_t static compare = 0x960;
+   uint32_t static compare = 0x5DC0;
 
    // Update the compare value
-   compare = compare + (0x960 - 0x0);
+   compare = compare + (0x5DC0 - 0x0);
    _CP0_SET_COMPARE(compare);
 
    IFS0CLR= 1 << _IFS0_CTIF_POSITION;
    // Add your custom code here
-
+   tick += 1;
 }
 
 /**
