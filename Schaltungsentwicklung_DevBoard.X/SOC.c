@@ -10,9 +10,10 @@ static const uint16_t lut_ocv_mV[101] = {
 }
 
 // returns soc in promille
-uint16_t get_soc_by_ocv(uint16_t ocv_mV)
+int16_t get_soc_by_ocv (uint16_t ocv_mV)
 {
     uint lower_index, higher_index;
+    int16_t soc_promille;
 
     // Search for index
     if (ocv_mV < lut_ocv_mV[0]) {
@@ -33,6 +34,16 @@ uint16_t get_soc_by_ocv(uint16_t ocv_mV)
         }
     }
 
-    // Interval is set -> Interpolation to find SOC with higher accuracy
+    // Interval is set -> use this information to do linear interpolation between the values
+    //
+    // SOC = m * (U - U_lower) + n
+    //
+    //          10 promille
+    // SOC = ------------------ * (U - U_lower) + SOC_lower
+    //       U_higher - U_lower
+    //
+    // Division error leads to underestimation of SOC which is better than overestimation by rounding
+    soc_promille = (10 * (ocv_mV - lut_ocv_mV[lower_index]) ) / (lut_ocv_mV[higher_index] - lut_ocv_mV[lower_index]) + 10 * lower_index;
 
+    return soc_promille;
 }
