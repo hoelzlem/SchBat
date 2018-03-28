@@ -2993,11 +2993,11 @@
   @Example
     <code>
     // Set RC5 high (1)
-    CHG_EN_SetHigh();
+    CHG_DISABLE_SetHigh();
     </code>
 
 */
-#define CHG_EN_SetHigh()          LATCbits.LATC5 = 1
+#define CHG_DISABLE_SetHigh()          LATCbits.LATC5 = 1
 /**
   @Summary
     Sets the GPIO pin, RC5, low using LATCbits.LATC5.
@@ -3017,11 +3017,11 @@
   @Example
     <code>
     // Set RC5 low (0)
-    CHG_EN_SetLow();
+    CHG_DISABLE_SetLow();
     </code>
 
 */
-#define CHG_EN_SetLow()           LATCbits.LATC5 = 0
+#define CHG_DISABLE_SetLow()           LATCbits.LATC5 = 0
 /**
   @Summary
     Toggles the GPIO pin, RC5, using LATCbits.LATC5.
@@ -3041,11 +3041,11 @@
   @Example
     <code>
     // Toggle RC5
-    CHG_EN_Toggle();
+    CHG_DISABLE_Toggle();
     </code>
 
 */
-#define CHG_EN_Toggle()           LATCbits.LATC5 ^= 1
+#define CHG_DISABLE_Toggle()           LATCbits.LATC5 ^= 1
 /**
   @Summary
     Reads the value of the GPIO pin, RC5.
@@ -3067,11 +3067,11 @@
     uint16_t portValue;
 
     // Read RC5
-    postValue = CHG_EN_GetValue();
+    postValue = CHG_DISABLE_GetValue();
     </code>
 
 */
-#define CHG_EN_GetValue()         PORTCbits.RC5
+#define CHG_DISABLE_GetValue()         PORTCbits.RC5
 /**
   @Summary
     Configures the GPIO pin, RC5, as an input.
@@ -3091,11 +3091,11 @@
   @Example
     <code>
     // Sets the RC5 as an input
-    CHG_EN_SetDigitalInput();
+    CHG_DISABLE_SetDigitalInput();
     </code>
 
 */
-#define CHG_EN_SetDigitalInput()  TRISCbits.TRISC5 = 1
+#define CHG_DISABLE_SetDigitalInput()  TRISCbits.TRISC5 = 1
 /**
   @Summary
     Configures the GPIO pin, RC5, as an output.
@@ -3115,11 +3115,11 @@
   @Example
     <code>
     // Sets the RC5 as an output
-    CHG_EN_SetDigitalOutput();
+    CHG_DISABLE_SetDigitalOutput();
     </code>
 
 */
-#define CHG_EN_SetDigitalOutput() TRISCbits.TRISC5 = 0
+#define CHG_DISABLE_SetDigitalOutput() TRISCbits.TRISC5 = 0
 /**
   @Summary
     Sets the GPIO pin, RC6, high using LATCbits.LATC6.

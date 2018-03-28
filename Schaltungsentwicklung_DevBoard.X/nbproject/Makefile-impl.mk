@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=DevBoard_Neu.X
+PROJECTNAME=Schaltungsentwicklung_DevBoard.X
 
 # Active Configuration
 DEFAULTCONF=default

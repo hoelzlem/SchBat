@@ -3,30 +3,18 @@
 #include "main.h"
 
 #include <stdint.h>
-
-typedef struct {
-    uint16_t battery_voltage_mV;
-    int16_t battery_current_mA;
-    int8_t battery_temperature_dgC;
-    uint16_t EXT_ADC_1_mV;
-    uint16_t EXT_ADC_2_mV;
-} Measurements_t;
+#include <stdbool.h>
 
 typedef struct {
     uint16_t min_battery_voltage_mV;
     uint16_t max_battery_voltage_mV;
+    uint16_t end_of_charge_voltage_mV;
     uint16_t max_battery_charge_current_mA;
     uint16_t max_battery_discharge_current_mA;
     int8_t min_battery_temperature_dgC;
     uint8_t max_battery_temperature_dgC;
+    uint32_t cell_capacity_mAs;
 } BMS_Configuration_t;
-
-typedef enum {
-    charging,
-    charged,
-    discharging,
-    discharged
-} BMS_State_t;
 
 extern BMS_Configuration_t BMS_configuration;
 
@@ -44,7 +32,11 @@ void BMS_step (void);
 
 //! Update measurements
 //!
-//! Do oversampling and conversion to measured voltage in mV
-void update_measurements(void);
+//! Do oversampling and conversion to measured values (e.g. battery voltage or battery current).
+static void update_measurements(void);
 
-void print_ADC_input_voltages (void);
+static void print_ADC_input_voltages (void);
+
+static void control_led (bool enable_led);
+
+static void control_charger (bool enable_charging);

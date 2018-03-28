@@ -100,15 +100,14 @@ void SYSTEM_Initialize(void)
     PIN_MANAGER_Initialize();
     OSCILLATOR_Initialize();
     CORETIMER_Initialize();
+    OC5_Initialize();
     SPI1_Initialize();
     OC4_Initialize();
-    UART1_Initialize();
-    OC1_Initialize();
-    TMR2_Initialize();
-    OC5_Initialize();
     I2C1_Initialize();
+    UART1_Initialize();
     ADC1_Initialize();
     TMR3_Initialize();
+    TMR2_Initialize();
     INTERRUPT_Initialize();
 
 }

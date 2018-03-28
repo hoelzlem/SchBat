@@ -13,95 +13,54 @@ void main (void)
     
     __XC_UART = 1;
     
+    OC4_PWMPulseWidthSet(0);
+    OC5_PWMPulseWidthSet(0);
+    
     delay_ms(10);
     
     printf("Startup\n");
     
-    U_SENS_DISABLE_SetLow();
+    printf("BMS_init\n");
+    
+    BMS_configuration.cell_capacity_mAs = 2050 * 3600;
+    BMS_configuration.max_battery_voltage_mV = 4250;
+    BMS_configuration.min_battery_voltage_mV = 3000;
+    BMS_configuration.end_of_charge_voltage_mV = 4200;
+    
+    BMS_init();
+    
+    printf("Finished\n");
     
     for(;;) {
-        // Delay 1 s
-        delay_ms(1000);
         
-        printf("Measuring tick = %d\n", tick);
-        print_ADC_input_voltages();
-        update_measurements();
+        // Heartbeat
+        {
+            static Tick_t last_tick_ms = 0;
+            
+            if (tick_ms - last_tick_ms >= 500) {
+                GPIO_1_Toggle();
+                
+                last_tick_ms = tick_ms;
+            }
+        }
+        
+        // BMS_step
+        {
+            static Tick_t last_tick_ms = 0;
+            
+            if (tick_ms - last_tick_ms >= 20) {                
+                BMS_step();
+
+                last_tick_ms = tick_ms;
+            }
+        }
     }
 }
 
-/*void main (void)
-{
-    bool outputs_on = false;
-    bool outputs_switched = false;
-    
-    bool run_down = false;
-    
-    uint32_t last_tick = 0;
-    uint16_t pwm_value = 150;
-    
-    // initialize the device
-    SYSTEM_Initialize();
-    
-    // Redirect printf to UART1
-    __XC_UART = 1;
-    
-    OC1_PWMPulseWidthSet(TMR3_Period16BitGet());
-    OC4_PWMPulseWidthSet(0);
-    OC5_PWMPulseWidthSet(TMR2_Period16BitGet());
-    
-    U_SENS_DISABLE_SetLow();
-    
-    printf("-------\n");
-    printf("Startup\n");
-    printf("-------\n");
-
-    while (1)
-    {                   
-        if (outputs_on) {
-            GPIO_1_SetHigh();          
-            
-            if (tick % 10000 == 0) {
-                if (!outputs_switched) {
-                    outputs_on = false;
-                    outputs_switched = true;
-                    
-                    //OC4_PWMPulseWidthSet(pwm_value);
-                    printf("PWM Value = %d\n", pwm_value);
-                    
-                    if (run_down) {
-                        if (pwm_value != 0) {
-                            pwm_value -= 10;
-                        }
-                        else {
-                            run_down = false;
-                        }
-                    }
-                    else {
-                        if (pwm_value < 2400) {
-                            pwm_value += 10;
-                        }
-                        else {
-                            run_down = true;
-                        }
-                    }
-                }                
-            }
-            else {
-                outputs_switched = false;
-            }
-        }
-        else {
-            GPIO_1_SetLow();                
-            
-            if (tick % 10000 == 0) {
-                if (!outputs_switched) {
-                    outputs_on = true;
-                    outputs_switched = true;
-                }                
-            }
-            else {
-                outputs_switched = false;
-            }
-        }
+void Error_Handler (void)
+{    
+    for (;;) {
+        GPIO_8_Toggle();
+        delay_ms(500);
     }
-}*/
+}

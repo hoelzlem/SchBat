@@ -56,7 +56,9 @@
 #include <stdint.h>
 #include <sys/attribs.h>
 
-extern uint32_t tick;
+typedef uint32_t Tick_t;
+
+extern Tick_t tick_ms;
 
 /**
  * @Param

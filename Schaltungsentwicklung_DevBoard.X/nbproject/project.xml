@@ -3,7 +3,7 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>DevBoard_Neu</name>
+            <name>Schaltungsentwicklung_DevBoard</name>
             <creation-uuid>a041346c-5009-4bcf-949c-d88c684f5432</creation-uuid>
             <make-project-type>0</make-project-type>
             <c-extensions>c</c-extensions>

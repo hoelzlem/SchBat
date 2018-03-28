@@ -3,13 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/eprakE/MPLABXProjects/DevBoard_Neu.X/main.c</file>
-            <file>file:/C:/Users/eprakE/MPLABXProjects/DevBoard_Neu.X/BMS.h</file>
-            <file>file:/C:/Users/eprakE/MPLABXProjects/DevBoard_Neu.X/main.h</file>
-            <file>file:/C:/Users/eprakE/MPLABXProjects/DevBoard_Neu.X/BMS.c</file>
-            <file>file:/C:/Users/eprakE/MPLABXProjects/DevBoard_Neu.X/mcc_generated_files/adc1.c</file>
-            <file>file:/C:/Users/eprakE/MPLABXProjects/DevBoard_Neu.X/mcc_generated_files/coretimer.c</file>
-            <file>file:/C:/Users/eprakE/MPLABXProjects/DevBoard_Neu.X/mcc_generated_files/adc1.h</file>
+            <file>file:/C:/Users/eprakE/MPLABXProjects/Schaltungsentwicklung_DevBoard.X/main.h</file>
+            <file>file:/C:/Users/eprakE/MPLABXProjects/Schaltungsentwicklung_DevBoard.X/main.c</file>
+            <file>file:/C:/Users/eprakE/MPLABXProjects/Schaltungsentwicklung_DevBoard.X/mcc_generated_files/mcc.c</file>
+            <file>file:/C:/Users/eprakE/MPLABXProjects/Schaltungsentwicklung_DevBoard.X/BMS.c</file>
+            <file>file:/C:/Users/eprakE/MPLABXProjects/Schaltungsentwicklung_DevBoard.X/SOC.c</file>
+            <file>file:/C:/Users/eprakE/MPLABXProjects/Schaltungsentwicklung_DevBoard.X/BMS.h</file>
         </group>
     </open-files>
 </project-private>

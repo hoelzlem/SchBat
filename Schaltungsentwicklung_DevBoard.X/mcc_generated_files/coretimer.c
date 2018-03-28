@@ -55,7 +55,7 @@
   Section: Driver Interface
 */
 
-uint32_t tick = 0;
+uint32_t tick_ms = 0;
 
 void CORETIMER_Initialize(void)
 {
@@ -83,7 +83,7 @@ void __ISR(_CORE_TIMER_VECTOR, IPL1AUTO) _coreTimerHandler()
 
    IFS0CLR= 1 << _IFS0_CTIF_POSITION;
    // Add your custom code here
-   tick += 1;
+   tick_ms += 1;
 }
 
 /**

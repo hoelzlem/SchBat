@@ -15,7 +15,6 @@
         <itemPath>mcc_generated_files/oc5.h</itemPath>
         <itemPath>mcc_generated_files/tmr3.h</itemPath>
         <itemPath>mcc_generated_files/oc4.h</itemPath>
-        <itemPath>mcc_generated_files/oc1.h</itemPath>
         <itemPath>mcc_generated_files/adc1.h</itemPath>
         <itemPath>mcc_generated_files/uart1.h</itemPath>
         <itemPath>mcc_generated_files/i2c1.h</itemPath>
@@ -23,6 +22,7 @@
       </logicalFolder>
       <itemPath>main.h</itemPath>
       <itemPath>BMS.h</itemPath>
+      <itemPath>SOC.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -42,7 +42,6 @@
         <itemPath>mcc_generated_files/oc5.c</itemPath>
         <itemPath>mcc_generated_files/tmr3.c</itemPath>
         <itemPath>mcc_generated_files/oc4.c</itemPath>
-        <itemPath>mcc_generated_files/oc1.c</itemPath>
         <itemPath>mcc_generated_files/adc1.c</itemPath>
         <itemPath>mcc_generated_files/uart1.c</itemPath>
         <itemPath>mcc_generated_files/i2c1.c</itemPath>
@@ -50,6 +49,7 @@
       </logicalFolder>
       <itemPath>BMS.c</itemPath>
       <itemPath>main.c</itemPath>
+      <itemPath>SOC.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

@@ -10,9 +10,9 @@ const uint16_t REFERENCE_VOLTAGE_mV = 2500;
 
 inline void delay_ms (uint16_t ms)
 {
-    uint32_t start_tick = tick;
+    uint32_t start_tick = tick_ms;
     
-    while (tick - start_tick < ms);
+    while (tick_ms - start_tick < ms);
 }
 
 inline uint32_t * va_2_pa (uint32_t * virtual_address) {
@@ -20,3 +20,5 @@ inline uint32_t * va_2_pa (uint32_t * virtual_address) {
     
     return physical_address;
 }
+
+void Error_Handler (void);
