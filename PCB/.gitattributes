@@ -1,0 +1,7 @@
+*.pdf binary
+
+# Eagle files
+*.sch binary
+*.brd binary
+*.epf binary
+*.lbr binary
