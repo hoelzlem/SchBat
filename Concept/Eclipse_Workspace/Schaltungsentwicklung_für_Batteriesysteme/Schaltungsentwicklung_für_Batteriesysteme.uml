@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Blocks="http://www.eclipse.org/papyrus/sysml/1.4/SysML/Blocks" xmlns:ModelElements="http://www.eclipse.org/papyrus/sysml/1.4/SysML/ModelElements" xmlns:Requirements="http://www.eclipse.org/papyrus/sysml/1.4/SysML/Requirements" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/sysml/1.4/SysML/Blocks http://www.eclipse.org/papyrus/sysml/1.4/SysML#//blocks http://www.eclipse.org/papyrus/sysml/1.4/SysML/ModelElements http://www.eclipse.org/papyrus/sysml/1.4/SysML#//modelelements http://www.eclipse.org/papyrus/sysml/1.4/SysML/Requirements http://www.eclipse.org/papyrus/sysml/1.4/SysML#//requirements">
+  <uml:Model xmi:id="_2fjUUByYEeiNjrdnSfHyBg" name="Schaltungsentwicklung_für_Batteriesysteme_Konzept" visibility="private">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_D74BoBy8EeiwBo-ZUHL_uA">
+      <body>Mobile Lamp Development Platform</body>
+    </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_NSdIkB8DEeiUY_wcbObuvA">
+      <body>External Power Supply</body>
+    </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_eB6vgB8DEeiUY_wcbObuvA">
+      <body>Li-Ion Cell</body>
+    </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_zGankB8EEeiUY_wcbObuvA">
+      <body>User</body>
+    </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_g83WUB8GEeiUY_wcbObuvA">
+      <body>Developer</body>
+    </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_r1K8oB8GEeiUY_wcbObuvA">
+      <body>Expansion Board</body>
+    </ownedComment>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_3EiQsByYEeiNjrdnSfHyBg">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_3E4O8ByYEeiNjrdnSfHyBg">
+      <importedPackage xmi:type="uml:Package" href="pathmap://SysML14_LIBRARIES/SysML-Standard-Library.uml#SysML.package_packagedElement_Libraries"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_OMm9gByvEeiwBo-ZUHL_uA" name="User"/>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_RN3IAByvEeiwBo-ZUHL_uA" name="Li-Ion Cell" visibility="private"/>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_-J0Z4ByvEeiwBo-ZUHL_uA" name="External Power Supply"/>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_VghWYBy3EeiwBo-ZUHL_uA" name="Developer"/>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_dElkwBy3EeiwBo-ZUHL_uA" name="Expansion Board"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_fGMTUBy7EeiwBo-ZUHL_uA" name="Battery Management"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_uXujsBy7EeiwBo-ZUHL_uA" name="Mobile Lamp"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_v4YeIBy7EeiwBo-ZUHL_uA" name="Development Platform"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_50VUcBy8EeiwBo-ZUHL_uA" memberEnd="_50WikBy8EeiwBo-ZUHL_uA _50WikRy8EeiwBo-ZUHL_uA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_50V7gBy8EeiwBo-ZUHL_uA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_50V7gRy8EeiwBo-ZUHL_uA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_50WikBy8EeiwBo-ZUHL_uA" name="development platform" type="_v4YeIBy7EeiwBo-ZUHL_uA" association="_50VUcBy8EeiwBo-ZUHL_uA"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_50WikRy8EeiwBo-ZUHL_uA" name="developer" type="_VghWYBy3EeiwBo-ZUHL_uA" association="_50VUcBy8EeiwBo-ZUHL_uA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_6mRuwBy8EeiwBo-ZUHL_uA" memberEnd="_6mS84hy8EeiwBo-ZUHL_uA _6mTj8By8EeiwBo-ZUHL_uA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6mS84By8EeiwBo-ZUHL_uA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6mS84Ry8EeiwBo-ZUHL_uA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_6mS84hy8EeiwBo-ZUHL_uA" name="development platform" type="_v4YeIBy7EeiwBo-ZUHL_uA" association="_6mRuwBy8EeiwBo-ZUHL_uA"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_6mTj8By8EeiwBo-ZUHL_uA" name="expansion board" type="_dElkwBy3EeiwBo-ZUHL_uA" association="_6mRuwBy8EeiwBo-ZUHL_uA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_7UGeEBy8EeiwBo-ZUHL_uA" memberEnd="_7UHsMhy8EeiwBo-ZUHL_uA _7UITQBy8EeiwBo-ZUHL_uA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_7UHsMBy8EeiwBo-ZUHL_uA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_7UHsMRy8EeiwBo-ZUHL_uA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_7UHsMhy8EeiwBo-ZUHL_uA" name="guarantee safe battery state" type="_fGMTUBy7EeiwBo-ZUHL_uA" association="_7UGeEBy8EeiwBo-ZUHL_uA"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_7UITQBy8EeiwBo-ZUHL_uA" name="li-ion cell" type="_RN3IAByvEeiwBo-ZUHL_uA" association="_7UGeEBy8EeiwBo-ZUHL_uA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_8gAQgBy8EeiwBo-ZUHL_uA" memberEnd="_8gA3khy8EeiwBo-ZUHL_uA _8gA3kxy8EeiwBo-ZUHL_uA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8gA3kBy8EeiwBo-ZUHL_uA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8gA3kRy8EeiwBo-ZUHL_uA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_8gA3khy8EeiwBo-ZUHL_uA" name="guarantee safe battery state" type="_fGMTUBy7EeiwBo-ZUHL_uA" association="_8gAQgBy8EeiwBo-ZUHL_uA"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_8gA3kxy8EeiwBo-ZUHL_uA" name="external power supply" type="_-J0Z4ByvEeiwBo-ZUHL_uA" association="_8gAQgBy8EeiwBo-ZUHL_uA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_-G7yEBy8EeiwBo-ZUHL_uA" memberEnd="_-G9AMRy8EeiwBo-ZUHL_uA _-G9AMhy8EeiwBo-ZUHL_uA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_-G8ZIBy8EeiwBo-ZUHL_uA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_-G9AMBy8EeiwBo-ZUHL_uA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_-G9AMRy8EeiwBo-ZUHL_uA" name="mobile lamp" type="_uXujsBy7EeiwBo-ZUHL_uA" association="_-G7yEBy8EeiwBo-ZUHL_uA"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_-G9AMhy8EeiwBo-ZUHL_uA" name="user" type="_OMm9gByvEeiwBo-ZUHL_uA" association="_-G7yEBy8EeiwBo-ZUHL_uA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_UUNFgBy9EeiwBo-ZUHL_uA" name="Recharge with USB Power Supply"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_odmcsBy9EeiwBo-ZUHL_uA" name="Illuminate Environment"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_tqGWwBy9EeiwBo-ZUHL_uA" name="Dimm Light"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_RzJokBy-EeiwBo-ZUHL_uA" memberEnd="_RzKPohy-EeiwBo-ZUHL_uA _RzKPoxy-EeiwBo-ZUHL_uA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_RzKPoBy-EeiwBo-ZUHL_uA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_RzKPoRy-EeiwBo-ZUHL_uA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_RzKPohy-EeiwBo-ZUHL_uA" name="recharge with usb power supply" type="_UUNFgBy9EeiwBo-ZUHL_uA" association="_RzJokBy-EeiwBo-ZUHL_uA"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_RzKPoxy-EeiwBo-ZUHL_uA" name="user" type="_OMm9gByvEeiwBo-ZUHL_uA" association="_RzJokBy-EeiwBo-ZUHL_uA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_ShSg8By-EeiwBo-ZUHL_uA" memberEnd="_ShTIAhy-EeiwBo-ZUHL_uA _ShTIAxy-EeiwBo-ZUHL_uA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ShTIABy-EeiwBo-ZUHL_uA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ShTIARy-EeiwBo-ZUHL_uA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_ShTIAhy-EeiwBo-ZUHL_uA" name="dimm light" type="_tqGWwBy9EeiwBo-ZUHL_uA" association="_ShSg8By-EeiwBo-ZUHL_uA"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_ShTIAxy-EeiwBo-ZUHL_uA" name="user" type="_OMm9gByvEeiwBo-ZUHL_uA" association="_ShSg8By-EeiwBo-ZUHL_uA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_Vx7yUBy-EeiwBo-ZUHL_uA" memberEnd="_Vx9ngRy-EeiwBo-ZUHL_uA _Vx-OkBy-EeiwBo-ZUHL_uA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Vx9AcBy-EeiwBo-ZUHL_uA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Vx9ngBy-EeiwBo-ZUHL_uA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_Vx9ngRy-EeiwBo-ZUHL_uA" name="illuminate environment" type="_odmcsBy9EeiwBo-ZUHL_uA" association="_Vx7yUBy-EeiwBo-ZUHL_uA"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_Vx-OkBy-EeiwBo-ZUHL_uA" name="user" type="_OMm9gByvEeiwBo-ZUHL_uA" association="_Vx7yUBy-EeiwBo-ZUHL_uA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_k-omABy-EeiwBo-ZUHL_uA" name="Develop BMS Functionality">
+      <include xmi:type="uml:Include" xmi:id="_dT7IUCCIEeibI6hNIvEtyw" addition="_YZ5eUCCIEeibI6hNIvEtyw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_nHw1sBy-EeiwBo-ZUHL_uA" name="Develop LED Dimming">
+      <include xmi:type="uml:Include" xmi:id="_05edUCCIEeibI6hNIvEtyw" addition="_xAwfUCCIEeibI6hNIvEtyw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_p8Ae8By-EeiwBo-ZUHL_uA" name="Hook up to Development Ecosystem"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_vA4uEBy-EeiwBo-ZUHL_uA" name="Power with Bench Supply"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_6B5kcBy-EeiwBo-ZUHL_uA" name="Switch between mobile and stationary Use"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_AKUUMBy_EeiwBo-ZUHL_uA" memberEnd="_AKU7Qhy_EeiwBo-ZUHL_uA _AKViUBy_EeiwBo-ZUHL_uA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_AKU7QBy_EeiwBo-ZUHL_uA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_AKU7QRy_EeiwBo-ZUHL_uA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_AKU7Qhy_EeiwBo-ZUHL_uA" name="switch between mobile and stationary use" type="_6B5kcBy-EeiwBo-ZUHL_uA" association="_AKUUMBy_EeiwBo-ZUHL_uA"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_AKViUBy_EeiwBo-ZUHL_uA" name="user" type="_OMm9gByvEeiwBo-ZUHL_uA" association="_AKUUMBy_EeiwBo-ZUHL_uA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_ITNG4By_EeiwBo-ZUHL_uA" memberEnd="_ITO8EBy_EeiwBo-ZUHL_uA _ITO8ERy_EeiwBo-ZUHL_uA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ITOVABy_EeiwBo-ZUHL_uA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ITOVARy_EeiwBo-ZUHL_uA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_ITO8EBy_EeiwBo-ZUHL_uA" name="develop bms functionality" type="_k-omABy-EeiwBo-ZUHL_uA" association="_ITNG4By_EeiwBo-ZUHL_uA"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_ITO8ERy_EeiwBo-ZUHL_uA" name="developer" type="_VghWYBy3EeiwBo-ZUHL_uA" association="_ITNG4By_EeiwBo-ZUHL_uA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_JQw7UBy_EeiwBo-ZUHL_uA" memberEnd="_JQxiYhy_EeiwBo-ZUHL_uA _JQxiYxy_EeiwBo-ZUHL_uA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_JQxiYBy_EeiwBo-ZUHL_uA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_JQxiYRy_EeiwBo-ZUHL_uA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_JQxiYhy_EeiwBo-ZUHL_uA" name="hook up to development ecosystem" type="_p8Ae8By-EeiwBo-ZUHL_uA" association="_JQw7UBy_EeiwBo-ZUHL_uA"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_JQxiYxy_EeiwBo-ZUHL_uA" name="developer" type="_VghWYBy3EeiwBo-ZUHL_uA" association="_JQw7UBy_EeiwBo-ZUHL_uA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_K_iKQBy_EeiwBo-ZUHL_uA" memberEnd="_K_ixUhy_EeiwBo-ZUHL_uA _K_jYYBy_EeiwBo-ZUHL_uA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_K_ixUBy_EeiwBo-ZUHL_uA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_K_ixURy_EeiwBo-ZUHL_uA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_K_ixUhy_EeiwBo-ZUHL_uA" name="develop led dimming" type="_nHw1sBy-EeiwBo-ZUHL_uA" association="_K_iKQBy_EeiwBo-ZUHL_uA"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_K_jYYBy_EeiwBo-ZUHL_uA" name="developer" type="_VghWYBy3EeiwBo-ZUHL_uA" association="_K_iKQBy_EeiwBo-ZUHL_uA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_Lo7skBy_EeiwBo-ZUHL_uA" memberEnd="_Lo86sBy_EeiwBo-ZUHL_uA _Lo86sRy_EeiwBo-ZUHL_uA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Lo8ToBy_EeiwBo-ZUHL_uA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Lo8ToRy_EeiwBo-ZUHL_uA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_Lo86sBy_EeiwBo-ZUHL_uA" name="power with bench supply" type="_vA4uEBy-EeiwBo-ZUHL_uA" association="_Lo7skBy_EeiwBo-ZUHL_uA"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_Lo86sRy_EeiwBo-ZUHL_uA" name="developer" type="_VghWYBy3EeiwBo-ZUHL_uA" association="_Lo7skBy_EeiwBo-ZUHL_uA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_NM0hMBy_EeiwBo-ZUHL_uA" memberEnd="_NM2WYBy_EeiwBo-ZUHL_uA _NM2WYRy_EeiwBo-ZUHL_uA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_NM1vUBy_EeiwBo-ZUHL_uA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_NM1vURy_EeiwBo-ZUHL_uA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_NM2WYBy_EeiwBo-ZUHL_uA" name="hook up to development ecosystem" type="_p8Ae8By-EeiwBo-ZUHL_uA" association="_NM0hMBy_EeiwBo-ZUHL_uA"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_NM2WYRy_EeiwBo-ZUHL_uA" name="expansion board" type="_dElkwBy3EeiwBo-ZUHL_uA" association="_NM0hMBy_EeiwBo-ZUHL_uA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_VY-DQBy_EeiwBo-ZUHL_uA" memberEnd="_VY-qUhy_EeiwBo-ZUHL_uA _VY_RYBy_EeiwBo-ZUHL_uA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_VY-qUBy_EeiwBo-ZUHL_uA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_VY-qURy_EeiwBo-ZUHL_uA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_VY-qUhy_EeiwBo-ZUHL_uA" name="recharge with usb power supply" type="_UUNFgBy9EeiwBo-ZUHL_uA" association="_VY-DQBy_EeiwBo-ZUHL_uA"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_VY_RYBy_EeiwBo-ZUHL_uA" name="external power supply" type="_-J0Z4ByvEeiwBo-ZUHL_uA" association="_VY-DQBy_EeiwBo-ZUHL_uA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_XSo6oBy_EeiwBo-ZUHL_uA" memberEnd="_XSphshy_EeiwBo-ZUHL_uA _XSphsxy_EeiwBo-ZUHL_uA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_XSphsBy_EeiwBo-ZUHL_uA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_XSphsRy_EeiwBo-ZUHL_uA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_XSphshy_EeiwBo-ZUHL_uA" name="power with bench supply" type="_vA4uEBy-EeiwBo-ZUHL_uA" association="_XSo6oBy_EeiwBo-ZUHL_uA"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_XSphsxy_EeiwBo-ZUHL_uA" name="external power supply" type="_-J0Z4ByvEeiwBo-ZUHL_uA" association="_XSo6oBy_EeiwBo-ZUHL_uA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_sTuJ8BzOEeiwBo-ZUHL_uA" name="Estimate remaining Uptime"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_GX1MEBzPEeiwBo-ZUHL_uA" memberEnd="_GX3BQRzPEeiwBo-ZUHL_uA _GX3oUBzPEeiwBo-ZUHL_uA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_GX2aMBzPEeiwBo-ZUHL_uA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_GX3BQBzPEeiwBo-ZUHL_uA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_GX3BQRzPEeiwBo-ZUHL_uA" name="battery management" type="_fGMTUBy7EeiwBo-ZUHL_uA" association="_GX1MEBzPEeiwBo-ZUHL_uA"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_GX3oUBzPEeiwBo-ZUHL_uA" name="developer" type="_VghWYBy3EeiwBo-ZUHL_uA" association="_GX1MEBzPEeiwBo-ZUHL_uA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_FJGSoBzQEeiwBo-ZUHL_uA" name="Guarantee safe Operation">
+      <include xmi:type="uml:Include" xmi:id="_9DzacCCIEeibI6hNIvEtyw" addition="_57bUQCCIEeibI6hNIvEtyw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_Mg3KYBzQEeiwBo-ZUHL_uA" name="Charging"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_S0Xv0BzQEeiwBo-ZUHL_uA" name="Supply Dev Board"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_wKzB0BzREeiwBo-ZUHL_uA" name="Enable mobile Operation"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_3YA2cBzREeiwBo-ZUHL_uA" memberEnd="_3YCEkBzREeiwBo-ZUHL_uA _3YCEkRzREeiwBo-ZUHL_uA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3YBdgBzREeiwBo-ZUHL_uA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3YBdgRzREeiwBo-ZUHL_uA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_3YCEkBzREeiwBo-ZUHL_uA" name="estimate remaining uptime" type="_sTuJ8BzOEeiwBo-ZUHL_uA" association="_3YA2cBzREeiwBo-ZUHL_uA"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_3YCEkRzREeiwBo-ZUHL_uA" name="li-ion cell" type="_RN3IAByvEeiwBo-ZUHL_uA" association="_3YA2cBzREeiwBo-ZUHL_uA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_4lNpYBzREeiwBo-ZUHL_uA" memberEnd="_4lO3gBzREeiwBo-ZUHL_uA _4lO3gRzREeiwBo-ZUHL_uA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_4lOQcBzREeiwBo-ZUHL_uA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_4lOQcRzREeiwBo-ZUHL_uA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_4lO3gBzREeiwBo-ZUHL_uA" name="charging" type="_Mg3KYBzQEeiwBo-ZUHL_uA" association="_4lNpYBzREeiwBo-ZUHL_uA"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_4lO3gRzREeiwBo-ZUHL_uA" name="external power supply" type="_-J0Z4ByvEeiwBo-ZUHL_uA" association="_4lNpYBzREeiwBo-ZUHL_uA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_6O7ZMBzREeiwBo-ZUHL_uA" memberEnd="_6O8AQhzREeiwBo-ZUHL_uA _6O8nUBzREeiwBo-ZUHL_uA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6O8AQBzREeiwBo-ZUHL_uA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6O8AQRzREeiwBo-ZUHL_uA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_6O8AQhzREeiwBo-ZUHL_uA" name="enable mobile operation" type="_wKzB0BzREeiwBo-ZUHL_uA" association="_6O7ZMBzREeiwBo-ZUHL_uA"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_6O8nUBzREeiwBo-ZUHL_uA" name="li-ion cell" type="_RN3IAByvEeiwBo-ZUHL_uA" association="_6O7ZMBzREeiwBo-ZUHL_uA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_7I9_kBzREeiwBo-ZUHL_uA" memberEnd="_7I-mohzREeiwBo-ZUHL_uA _7I-moxzREeiwBo-ZUHL_uA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_7I-moBzREeiwBo-ZUHL_uA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_7I-moRzREeiwBo-ZUHL_uA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_7I-mohzREeiwBo-ZUHL_uA" name="guarantee safe state of operation" type="_FJGSoBzQEeiwBo-ZUHL_uA" association="_7I9_kBzREeiwBo-ZUHL_uA"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_7I-moxzREeiwBo-ZUHL_uA" name="li-ion cell" type="_RN3IAByvEeiwBo-ZUHL_uA" association="_7I9_kBzREeiwBo-ZUHL_uA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_8mOnwBzREeiwBo-ZUHL_uA" memberEnd="_8mPO0hzREeiwBo-ZUHL_uA _8mP14BzREeiwBo-ZUHL_uA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8mPO0BzREeiwBo-ZUHL_uA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8mPO0RzREeiwBo-ZUHL_uA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_8mPO0hzREeiwBo-ZUHL_uA" name="supply board" type="_S0Xv0BzQEeiwBo-ZUHL_uA" association="_8mOnwBzREeiwBo-ZUHL_uA"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_8mP14BzREeiwBo-ZUHL_uA" name="external power supply" type="_-J0Z4ByvEeiwBo-ZUHL_uA" association="_8mOnwBzREeiwBo-ZUHL_uA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_-s29EBzREeiwBo-ZUHL_uA" memberEnd="_-s4LMhzREeiwBo-ZUHL_uA _-s4yQBzREeiwBo-ZUHL_uA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_-s4LMBzREeiwBo-ZUHL_uA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_-s4LMRzREeiwBo-ZUHL_uA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_-s4LMhzREeiwBo-ZUHL_uA" name="supply board" type="_S0Xv0BzQEeiwBo-ZUHL_uA" association="_-s29EBzREeiwBo-ZUHL_uA"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_-s4yQBzREeiwBo-ZUHL_uA" name="li-ion cell" type="_RN3IAByvEeiwBo-ZUHL_uA" association="_-s29EBzREeiwBo-ZUHL_uA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="__kMNsBzREeiwBo-ZUHL_uA" memberEnd="__kNb0BzREeiwBo-ZUHL_uA __kNb0RzREeiwBo-ZUHL_uA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__kM0wBzREeiwBo-ZUHL_uA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__kM0wRzREeiwBo-ZUHL_uA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="__kNb0BzREeiwBo-ZUHL_uA" name="charging" type="_Mg3KYBzQEeiwBo-ZUHL_uA" association="__kMNsBzREeiwBo-ZUHL_uA"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="__kNb0RzREeiwBo-ZUHL_uA" name="li-ion cell" type="_RN3IAByvEeiwBo-ZUHL_uA" association="__kMNsBzREeiwBo-ZUHL_uA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_9-5RUB11EeilUPF6vycfPg" name="Developmentboard">
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_0HB-4B12EeilUPF6vycfPg" name="Non-Functional Requirements">
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_9GHZwB12EeilUPF6vycfPg" name="Development Process VDI 2206"/>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_0FnAICB3EeibI6hNIvEtyw" name="Development Functionality"/>
+      </nestedClassifier>
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_xxlKcB12EeilUPF6vycfPg" name="Functional Requirements">
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_VJPpUB18EeilUPF6vycfPg" name="Battery Management System">
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_JIy5wB19EeilUPF6vycfPg" name="Guarantee Safe Operation">
+            <nestedClassifier xmi:type="uml:Class" xmi:id="_cbmikCBvEeibI6hNIvEtyw" name="Safe Voltage Range"/>
+            <nestedClassifier xmi:type="uml:Class" xmi:id="_cy_H0CBvEeibI6hNIvEtyw" name="Safe Current Range"/>
+            <nestedClassifier xmi:type="uml:Class" xmi:id="_cFB1oCBvEeibI6hNIvEtyw" name="Safe Temp Range"/>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_9d2G0B2CEeilUPF6vycfPg" name="Estimation of remaining Uptime"/>
+        </nestedClassifier>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_M743QB2FEeilUPF6vycfPg" name="Stationary and mobile Operation">
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_R9ALQB2GEeilUPF6vycfPg" name="Transition stationary mobile"/>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_H1DmsB2NEeilUPF6vycfPg" name="Stationary Power Source">
+            <nestedClassifier xmi:type="uml:Class" xmi:id="_g3IHkB2OEeilUPF6vycfPg" name="Power Rating"/>
+          </nestedClassifier>
+        </nestedClassifier>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_OVvakB2PEeilUPF6vycfPg" name="Light Source">
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_4Ub0oB2QEeilUPF6vycfPg" name="Dimming"/>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_ems44B2VEeilUPF6vycfPg" name="Integrated Charger">
+            <nestedClassifier xmi:type="uml:Class" xmi:id="_PBiNwB2IEeilUPF6vycfPg" name="Mobile Power Source">
+              <nestedClassifier xmi:type="uml:Class" xmi:id="_E6blcB2JEeilUPF6vycfPg" name="Single Cell Li-Po Accumulator">
+                <nestedClassifier xmi:type="uml:Class" xmi:id="_yGW_QB2EEeilUPF6vycfPg" name="Compatibility Cell Chemistries"/>
+                <nestedClassifier xmi:type="uml:Class" xmi:id="_buxDcB2KEeilUPF6vycfPg" name="Depth of Discharge"/>
+                <nestedClassifier xmi:type="uml:Class" xmi:id="_22awwB2LEeilUPF6vycfPg" name="Hot Swapping"/>
+              </nestedClassifier>
+              <nestedClassifier xmi:type="uml:Class" xmi:id="_gJ-awB2bEeilUPF6vycfPg" name="Battery Interface"/>
+              <nestedClassifier xmi:type="uml:Class" xmi:id="_NJcvEB5qEei8pbjxkkJKTg" name="Integrated Charger">
+                <nestedClassifier xmi:type="uml:Class" xmi:id="_NJcvER5qEei8pbjxkkJKTg" name="Mobile Power Source">
+                  <nestedClassifier xmi:type="uml:Class" xmi:id="_NJcvEh5qEei8pbjxkkJKTg" name="Single Cell Li-Po Accumulator">
+                    <nestedClassifier xmi:type="uml:Class" xmi:id="_NJcvEx5qEei8pbjxkkJKTg" name="Compatibility Cell Chemistries"/>
+                    <nestedClassifier xmi:type="uml:Class" xmi:id="_NJcvFB5qEei8pbjxkkJKTg" name="Depth of Discharge"/>
+                    <nestedClassifier xmi:type="uml:Class" xmi:id="_NJcvFR5qEei8pbjxkkJKTg" name="Hot Swapping"/>
+                  </nestedClassifier>
+                  <nestedClassifier xmi:type="uml:Class" xmi:id="_NJcvFh5qEei8pbjxkkJKTg" name="Interface"/>
+                </nestedClassifier>
+              </nestedClassifier>
+            </nestedClassifier>
+          </nestedClassifier>
+        </nestedClassifier>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_el6LgB2REeilUPF6vycfPg" name="Expansion Board">
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_y399MB2WEeilUPF6vycfPg" name="Supply"/>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_W6lk8B2ZEeilUPF6vycfPg" name="Interface"/>
+        </nestedClassifier>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_39mLgB2cEeilUPF6vycfPg" name="Mechanical Interface ">
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_auvGMCBxEeibI6hNIvEtyw" name="Mounting"/>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_afIj8CBxEeibI6hNIvEtyw" name="Dimensions"/>
+        </nestedClassifier>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_g3sPMCB2EeibI6hNIvEtyw" name="Operating Conditions"/>
+      </nestedClassifier>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_CzOtkB13EeilUPF6vycfPg" name="Longest possible Operation Time"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_tIQxwB19EeilUPF6vycfPg" name="Monitor Voltage"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_N2FrIB2EEeilUPF6vycfPg" name="Monitor Current"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_aeO3YB2EEeilUPF6vycfPg" name="" client="_JIy5wB19EeilUPF6vycfPg" supplier="_N2FrIB2EEeilUPF6vycfPg"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_gpuJQB2EEeilUPF6vycfPg" name="Monitor Temperature"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_ndqiQB2EEeilUPF6vycfPg" name="" client="_JIy5wB19EeilUPF6vycfPg" supplier="_gpuJQB2EEeilUPF6vycfPg"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_wMfeIB2FEeilUPF6vycfPg" name="Minimum mobile Uptime"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_oHtZQB2OEeilUPF6vycfPg" name="" client="_H1DmsB2NEeilUPF6vycfPg" supplier="_g3IHkB2OEeilUPF6vycfPg"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_b6YO0B2QEeilUPF6vycfPg" name="LED Colour"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_bAELgB5oEei8pbjxkkJKTg" name="Accuracy"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_H2rDUB5pEei8pbjxkkJKTg" name="Accuracy"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_uOcPcB5pEei8pbjxkkJKTg" name="Accuracy"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_sfwqoB5qEei8pbjxkkJKTg" name="DeriveReqt1" client="_gpuJQB2EEeilUPF6vycfPg" supplier="_uOcPcB5pEei8pbjxkkJKTg"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_7I2wEB5sEei8pbjxkkJKTg" name="Interface"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_UIHNgB5uEei8pbjxkkJKTg" client="_OVvakB2PEeilUPF6vycfPg" supplier="_b6YO0B2QEeilUPF6vycfPg"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_e0ROMB5uEei8pbjxkkJKTg" name="" client="_2fjUUByYEeiNjrdnSfHyBg" supplier="_bAELgB5oEei8pbjxkkJKTg"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_h4AE8B5uEei8pbjxkkJKTg" name="" client="_N2FrIB2EEeilUPF6vycfPg" supplier="_H2rDUB5pEei8pbjxkkJKTg"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_i_BXYB5uEei8pbjxkkJKTg" name="" client="_gpuJQB2EEeilUPF6vycfPg" supplier="_uOcPcB5pEei8pbjxkkJKTg"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_u7LAUB5uEei8pbjxkkJKTg" name="" client="_9d2G0B2CEeilUPF6vycfPg" supplier="_7I2wEB5sEei8pbjxkkJKTg"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_wG4lgB5uEei8pbjxkkJKTg" name="" client="_CzOtkB13EeilUPF6vycfPg" supplier="_wMfeIB2FEeilUPF6vycfPg"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_c1nTsB5vEei8pbjxkkJKTg" name="Boost Converter"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_xBMcMB5vEei8pbjxkkJKTg" name="Controllable Boost Converter"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_SRVAIB5wEei8pbjxkkJKTg" name="Luminous Flux"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_ZveMsB5wEei8pbjxkkJKTg" name="" client="_OVvakB2PEeilUPF6vycfPg" supplier="_SRVAIB5wEei8pbjxkkJKTg"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_gynfUB5wEei8pbjxkkJKTg" name="" client="_4Ub0oB2QEeilUPF6vycfPg" supplier="_xBMcMB5vEei8pbjxkkJKTg"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_ih5EkB5wEei8pbjxkkJKTg" name="" client="_SRVAIB5wEei8pbjxkkJKTg" supplier="_xBMcMB5vEei8pbjxkkJKTg"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Jm3aMB2bEeilUPF6vycfPg" name="Interface"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_cVHt8B7sEeiUY_wcbObuvA" name="V_Bat_Range"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_eyuY0B7sEeiUY_wcbObuvA" name="DeriveReqt2" client="_yGW_QB2EEeilUPF6vycfPg" supplier="_cVHt8B7sEeiUY_wcbObuvA"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_U5DTEB7uEeiUY_wcbObuvA" name="Power Supply">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_8VS3IB7yEeiUY_wcbObuvA" name="Output_Voltage">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_DAT2QB72EeiUY_wcbObuvA" name="Output_Current">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Zoa9gB70EeiUY_wcbObuvA" name="Select_Input"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_SGa5wB72EeiUY_wcbObuvA" name="Regulate_Output_Voltage"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_WIStYB7uEeiUY_wcbObuvA" name="BMS">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_R2LTwB71EeiUY_wcbObuvA" name="Voltage_Min">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_TpmZMB71EeiUY_wcbObuvA" name="Voltage_Max">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_VG-9MB71EeiUY_wcbObuvA" name="Charge_Current_Max">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_YF4XQB71EeiUY_wcbObuvA" name="Discharge_Current_Max">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_cl0tUB71EeiUY_wcbObuvA" name="Charge_Temperature_Min">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_esTRoB71EeiUY_wcbObuvA" name="Charge_Temperature_Max">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_gIvacB71EeiUY_wcbObuvA" name="Discharge_Temperature_Min">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_h0gYsB71EeiUY_wcbObuvA" name="Discharge_Temperature_Max">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ldSdQB71EeiUY_wcbObuvA" name="State_of_Charge">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_9zZrgx8AEeiUY_wcbObuvA" name="current sensor" type="_BEJvwB7vEeiUY_wcbObuvA" aggregation="composite" association="_9zZrgB8AEeiUY_wcbObuvA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_9zaSkB8AEeiUY_wcbObuvA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9zaSkR8AEeiUY_wcbObuvA" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_AVDI4h8BEeiUY_wcbObuvA" name="voltage sensor" type="_-e_O4B7vEeiUY_wcbObuvA" aggregation="composite" association="_AVCh0B8BEeiUY_wcbObuvA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AVDv8B8BEeiUY_wcbObuvA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AVDv8R8BEeiUY_wcbObuvA" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_iOVQIh8EEeiUY_wcbObuvA" name="rgb led" type="_tGNkMB76EeiUY_wcbObuvA" aggregation="composite" association="_iOUpEB8EEeiUY_wcbObuvA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iOV3MB8EEeiUY_wcbObuvA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iOV3MR8EEeiUY_wcbObuvA" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_k9SJsh8EEeiUY_wcbObuvA" name="communication" type="_A80YsB7vEeiUY_wcbObuvA" aggregation="composite" association="_k9RioB8EEeiUY_wcbObuvA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_k9SJsx8EEeiUY_wcbObuvA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_k9SJtB8EEeiUY_wcbObuvA" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_YJMhQh8GEeiUY_wcbObuvA" name="additional io" type="_Dbm34B8GEeiUY_wcbObuvA" aggregation="composite" association="_YJL6MB8GEeiUY_wcbObuvA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YJNIUB8GEeiUY_wcbObuvA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YJNIUR8GEeiUY_wcbObuvA" value="11"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_dSVqgB70EeiUY_wcbObuvA" name="Monitor_Voltage"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_efvRwB70EeiUY_wcbObuvA" name="Monitor_Current"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_fvMHcB70EeiUY_wcbObuvA" name="Monitor_Temperature"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_haS-YB70EeiUY_wcbObuvA" name="Disconnect_Battery"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_n5Kp0B71EeiUY_wcbObuvA" name="Estimate_State_of_Charge"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_WSH-0B7uEeiUY_wcbObuvA" name="Charger">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_pdBwoB7yEeiUY_wcbObuvA" name="Maximum_Current">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_2rxQkB73EeiUY_wcbObuvA" name="Maximum_Voltage">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_fpZ6cB7yEeiUY_wcbObuvA" name="Charge_Accumulator"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_WdQQwB7uEeiUY_wcbObuvA" name="LED Driver">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_BzZJcB7xEeiUY_wcbObuvA" name="LED_Current" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_PPBBEB7xEeiUY_wcbObuvA" name="Dimming_Duty_Cycle" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_b3-ssB7xEeiUY_wcbObuvA" name="Regulate_Current" concurrency="guarded"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_DhCm8B8FEeiUY_wcbObuvA" name="set_Current"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_AzYv4B7vEeiUY_wcbObuvA" name="Power LED">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Ib9G8B7zEeiUY_wcbObuvA" name="Luminous_Flux">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_TPnoYB70EeiUY_wcbObuvA" name="Current">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_URO2YB70EeiUY_wcbObuvA" name="Voltage">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ArJVsB72EeiUY_wcbObuvA" name="Temperature">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_A80YsB7vEeiUY_wcbObuvA" name="Communication">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_0hhRcB71EeiUY_wcbObuvA" name="Do_UART_Communication"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_7LaWkB71EeiUY_wcbObuvA" name="Do_SPI_Communication"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_8booUB71EeiUY_wcbObuvA" name="Do_I²C_Communication"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_BEJvwB7vEeiUY_wcbObuvA" name="Current Sensor">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_vkproB7xEeiUY_wcbObuvA" name="Measurement">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_j6RIIB7xEeiUY_wcbObuvA" name="Read_Current"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_-e_O4B7vEeiUY_wcbObuvA" name="Voltage Sensor">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_M8XsMB71EeiUY_wcbObuvA" name="Measurement">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_LkCnUB71EeiUY_wcbObuvA" name="Read_Voltage"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_tGNkMB76EeiUY_wcbObuvA" name="RGB LED">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_3M0AwB76EeiUY_wcbObuvA" name="Brightness_Red">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Ckqp0B77EeiUY_wcbObuvA" name="Brightness_Green">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_EgNJcB77EeiUY_wcbObuvA" name="Brightness_Blue">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_9zZrgB8AEeiUY_wcbObuvA" memberEnd="_9zZrgx8AEeiUY_wcbObuvA _9zaSkh8AEeiUY_wcbObuvA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_9zZrgR8AEeiUY_wcbObuvA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_9zZrgh8AEeiUY_wcbObuvA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_9zaSkh8AEeiUY_wcbObuvA" name="bms" type="_WIStYB7uEeiUY_wcbObuvA" association="_9zZrgB8AEeiUY_wcbObuvA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_AVCh0B8BEeiUY_wcbObuvA" memberEnd="_AVDI4h8BEeiUY_wcbObuvA _AVDv8h8BEeiUY_wcbObuvA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_AVDI4B8BEeiUY_wcbObuvA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_AVDI4R8BEeiUY_wcbObuvA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_AVDv8h8BEeiUY_wcbObuvA" name="bms" type="_WIStYB7uEeiUY_wcbObuvA" association="_AVCh0B8BEeiUY_wcbObuvA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_ZGWfUB8BEeiUY_wcbObuvA" name="measure" client="_RN3IAByvEeiwBo-ZUHL_uA" supplier="_BEJvwB7vEeiUY_wcbObuvA"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_Z-LfMB8BEeiUY_wcbObuvA" name="measure" client="_RN3IAByvEeiwBo-ZUHL_uA" supplier="_-e_O4B7vEeiUY_wcbObuvA"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_1uJJsB8CEeiUY_wcbObuvA" name="supply" client="_-J0Z4ByvEeiwBo-ZUHL_uA" supplier="_U5DTEB7uEeiUY_wcbObuvA"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_cfzcgB8DEeiUY_wcbObuvA" name="supply" client="_U5DTEB7uEeiUY_wcbObuvA" supplier="_WSH-0B7uEeiUY_wcbObuvA"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_iZd-kB8DEeiUY_wcbObuvA" name="charge" client="_2fjUUByYEeiNjrdnSfHyBg" supplier="_RN3IAByvEeiwBo-ZUHL_uA"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_4RQxQB8DEeiUY_wcbObuvA" name="supply" client="_U5DTEB7uEeiUY_wcbObuvA" supplier="_WdQQwB7uEeiUY_wcbObuvA"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_NVAQ0B8EEeiUY_wcbObuvA" name="select_input" client="_WIStYB7uEeiUY_wcbObuvA" supplier="_U5DTEB7uEeiUY_wcbObuvA"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_TrTEgB8EEeiUY_wcbObuvA" name="regulate_current" client="_WdQQwB7uEeiUY_wcbObuvA" supplier="_AzYv4B7vEeiUY_wcbObuvA"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_iOUpEB8EEeiUY_wcbObuvA" memberEnd="_iOVQIh8EEeiUY_wcbObuvA _iOV3Mh8EEeiUY_wcbObuvA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_iOVQIB8EEeiUY_wcbObuvA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_iOVQIR8EEeiUY_wcbObuvA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_iOV3Mh8EEeiUY_wcbObuvA" name="bms" type="_WIStYB7uEeiUY_wcbObuvA" association="_iOUpEB8EEeiUY_wcbObuvA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_k9RioB8EEeiUY_wcbObuvA" visibility="private" memberEnd="_k9SJsh8EEeiUY_wcbObuvA _k9SJtR8EEeiUY_wcbObuvA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_k9SJsB8EEeiUY_wcbObuvA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_k9SJsR8EEeiUY_wcbObuvA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_k9SJtR8EEeiUY_wcbObuvA" name="bms" type="_WIStYB7uEeiUY_wcbObuvA" association="_k9RioB8EEeiUY_wcbObuvA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_2r4SYB8EEeiUY_wcbObuvA" name="inform" client="_tGNkMB76EeiUY_wcbObuvA" supplier="_OMm9gByvEeiwBo-ZUHL_uA"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_FeaSkB8FEeiUY_wcbObuvA" name="set_current" client="_OMm9gByvEeiwBo-ZUHL_uA" supplier="_WdQQwB7uEeiUY_wcbObuvA"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_TQ81YB8FEeiUY_wcbObuvA" name="supply" client="_RN3IAByvEeiwBo-ZUHL_uA" supplier="_U5DTEB7uEeiUY_wcbObuvA"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Dbm34B8GEeiUY_wcbObuvA" name="Additional IO">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_FF-H8B8GEeiUY_wcbObuvA" name="set_GPIO"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Lo6QgB8GEeiUY_wcbObuvA" name="read_GPIO"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_MvSCsB8GEeiUY_wcbObuvA" name="read_ADC"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_YJL6MB8GEeiUY_wcbObuvA" memberEnd="_YJMhQh8GEeiUY_wcbObuvA _YJNIUh8GEeiUY_wcbObuvA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_YJMhQB8GEeiUY_wcbObuvA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_YJMhQR8GEeiUY_wcbObuvA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_YJNIUh8GEeiUY_wcbObuvA" name="bms" type="_WIStYB7uEeiUY_wcbObuvA" association="_YJL6MB8GEeiUY_wcbObuvA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_m1xqcB8GEeiUY_wcbObuvA" name="program" client="_VghWYBy3EeiwBo-ZUHL_uA" supplier="_WIStYB7uEeiUY_wcbObuvA"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_HkpUYB8HEeiUY_wcbObuvA" name="connect" client="_Dbm34B8GEeiUY_wcbObuvA" supplier="_dElkwBy3EeiwBo-ZUHL_uA"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_JkS38B8HEeiUY_wcbObuvA" name="connect" client="_dElkwBy3EeiwBo-ZUHL_uA" supplier="_Dbm34B8GEeiUY_wcbObuvA"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_MRqdIB8HEeiUY_wcbObuvA" name="supply" client="_U5DTEB7uEeiUY_wcbObuvA" supplier="_dElkwBy3EeiwBo-ZUHL_uA"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_CeAfgCBsEeibI6hNIvEtyw" name="Range"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_DBBF8CBsEeibI6hNIvEtyw" name="Frequency"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_DWBsoCBsEeibI6hNIvEtyw" name="Range"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_MnreMCBsEeibI6hNIvEtyw" name="Frequency"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_M6JuQCBsEeibI6hNIvEtyw" name="Range"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_NKAvMCBsEeibI6hNIvEtyw" name="Frequency"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_g1CIUCBsEeibI6hNIvEtyw" name="DeriveReqt3" client="_N2FrIB2EEeilUPF6vycfPg" supplier="_2fjUUByYEeiNjrdnSfHyBg"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_hs6ykCBsEeibI6hNIvEtyw" name="DeriveReqt4" client="_N2FrIB2EEeilUPF6vycfPg" supplier="_DBBF8CBsEeibI6hNIvEtyw"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_ihQZkCBsEeibI6hNIvEtyw" name="DeriveReqt6" client="_tIQxwB19EeilUPF6vycfPg" supplier="_MnreMCBsEeibI6hNIvEtyw"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_jhz3oCBsEeibI6hNIvEtyw" name="DeriveReqt7" client="_gpuJQB2EEeilUPF6vycfPg" supplier="_M6JuQCBsEeibI6hNIvEtyw"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_kUGQMCBsEeibI6hNIvEtyw" name="DeriveReqt8" client="_gpuJQB2EEeilUPF6vycfPg" supplier="_NKAvMCBsEeibI6hNIvEtyw"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_yqV9ACBsEeibI6hNIvEtyw" name="DeriveReqt9" client="_tIQxwB19EeilUPF6vycfPg" supplier="_DWBsoCBsEeibI6hNIvEtyw"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_vIFhwCBtEeibI6hNIvEtyw" name="DeriveReqt10" client="_2fjUUByYEeiNjrdnSfHyBg" supplier="_CeAfgCBsEeibI6hNIvEtyw"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_HJXJcCBuEeibI6hNIvEtyw" name="DeriveReqt11" client="_9d2G0B2CEeilUPF6vycfPg" supplier="_N2FrIB2EEeilUPF6vycfPg"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_JVRAUCBuEeibI6hNIvEtyw" name="DeriveReqt12" client="_9d2G0B2CEeilUPF6vycfPg" supplier="_tIQxwB19EeilUPF6vycfPg"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Q4-pYCBuEeibI6hNIvEtyw" name="Accuracy"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_dE4lkCBuEeibI6hNIvEtyw" name="DeriveReqt13" client="_9d2G0B2CEeilUPF6vycfPg" supplier="_Q4-pYCBuEeibI6hNIvEtyw"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_GiaowCBvEeibI6hNIvEtyw" name="DeriveReqt14" client="_Q4-pYCBuEeibI6hNIvEtyw" supplier="_H2rDUB5pEei8pbjxkkJKTg"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_IG7vgCBvEeibI6hNIvEtyw" name="DeriveReqt15" client="_Q4-pYCBuEeibI6hNIvEtyw" supplier="_bAELgB5oEei8pbjxkkJKTg"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_tfeTQCBvEeibI6hNIvEtyw" name="DeriveReqt16" client="_cFB1oCBvEeibI6hNIvEtyw" supplier="_gpuJQB2EEeilUPF6vycfPg"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_uUCjwCBvEeibI6hNIvEtyw" name="DeriveReqt17" client="_cbmikCBvEeibI6hNIvEtyw" supplier="_tIQxwB19EeilUPF6vycfPg"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_u4jmECBvEeibI6hNIvEtyw" name="DeriveReqt18" client="_cy_H0CBvEeibI6hNIvEtyw" supplier="_N2FrIB2EEeilUPF6vycfPg"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_y5ym4CBvEeibI6hNIvEtyw" name="Safe Range"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_zLT0sCBvEeibI6hNIvEtyw" name="Safe Range"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_0bfDICBvEeibI6hNIvEtyw" name="Safe Range"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_5L1MsCBvEeibI6hNIvEtyw" name="DeriveReqt19" client="_cy_H0CBvEeibI6hNIvEtyw" supplier="_0bfDICBvEeibI6hNIvEtyw"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_5_oBICBvEeibI6hNIvEtyw" name="DeriveReqt20" client="_cbmikCBvEeibI6hNIvEtyw" supplier="_zLT0sCBvEeibI6hNIvEtyw"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_6iwjYCBvEeibI6hNIvEtyw" name="DeriveReqt21" client="_cFB1oCBvEeibI6hNIvEtyw" supplier="_y5ym4CBvEeibI6hNIvEtyw"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_IcYTsCByEeibI6hNIvEtyw" name="Safe Shutdown"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_SxMycCByEeibI6hNIvEtyw" name="DeriveReqt22" client="_JIy5wB19EeilUPF6vycfPg" supplier="_IcYTsCByEeibI6hNIvEtyw"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_slRYACBzEeibI6hNIvEtyw" name="PCB restrictions"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_wstHcCBzEeibI6hNIvEtyw" name="DeriveReqt23" client="_auvGMCBxEeibI6hNIvEtyw" supplier="_slRYACBzEeibI6hNIvEtyw"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_zzrfcCBzEeibI6hNIvEtyw" name="DeriveReqt24" client="_afIj8CBxEeibI6hNIvEtyw" supplier="_slRYACBzEeibI6hNIvEtyw"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_n7NnMCB0EeibI6hNIvEtyw" name="DeriveReqt25" client="_cVHt8B7sEeiUY_wcbObuvA" supplier="_c1nTsB5vEei8pbjxkkJKTg"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_-0EOQCB0EeibI6hNIvEtyw" name="Battery Characteristics"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_DJevUCB1EeibI6hNIvEtyw" name="DeriveReqt27" client="_yGW_QB2EEeilUPF6vycfPg" supplier="_-0EOQCB0EeibI6hNIvEtyw"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_Ft-FUCB1EeibI6hNIvEtyw" name="DeriveReqt28" client="_22awwB2LEeilUPF6vycfPg" supplier="_-0EOQCB0EeibI6hNIvEtyw"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_fAUTUCB1EeibI6hNIvEtyw" name="Communication"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_iGYsYCB1EeibI6hNIvEtyw" name="DeriveReqt29" client="_W6lk8B2ZEeilUPF6vycfPg" supplier="_fAUTUCB1EeibI6hNIvEtyw"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_pjbFsCB1EeibI6hNIvEtyw" name="GPIO / ADC Functionality"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_t7QooCB1EeibI6hNIvEtyw" name="DeriveReqt30" client="_W6lk8B2ZEeilUPF6vycfPg" supplier="_pjbFsCB1EeibI6hNIvEtyw"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_jC3GQCB2EeibI6hNIvEtyw" name="Temperature Range"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_jR8rICB2EeibI6hNIvEtyw" name="Humidity Range"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_zCa6QCB2EeibI6hNIvEtyw" name="DeriveReqt31" client="_g3sPMCB2EeibI6hNIvEtyw" supplier="_jC3GQCB2EeibI6hNIvEtyw"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_zgWzcCB2EeibI6hNIvEtyw" name="DeriveReqt32" client="_g3sPMCB2EeibI6hNIvEtyw" supplier="_jR8rICB2EeibI6hNIvEtyw"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Ncu14CB3EeibI6hNIvEtyw" name="Reverse Polarity Protection"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_SrINYCB3EeibI6hNIvEtyw" name="DeriveReqt33" client="_JIy5wB19EeilUPF6vycfPg" supplier="_Ncu14CB3EeibI6hNIvEtyw"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_0SEHwCB3EeibI6hNIvEtyw" name="Development API"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_6_UC4CB3EeibI6hNIvEtyw" name="DeriveReqt34" client="_0FnAICB3EeibI6hNIvEtyw" supplier="_0SEHwCB3EeibI6hNIvEtyw"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Jy5L8CB4EeibI6hNIvEtyw" name="Debugging Capabilities"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_SZxiMCB4EeibI6hNIvEtyw" name="DeriveReqt35" client="_0FnAICB3EeibI6hNIvEtyw" supplier="_Jy5L8CB4EeibI6hNIvEtyw"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_svDz4CB4EeibI6hNIvEtyw" name="Input specification"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_xTtq0CB4EeibI6hNIvEtyw" name="Refine1" client="_pjbFsCB1EeibI6hNIvEtyw" supplier="_svDz4CB4EeibI6hNIvEtyw"/>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_SFEDMCCIEeibI6hNIvEtyw" name="Development Environment"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_YZ5eUCCIEeibI6hNIvEtyw" name="Run Test Applikation">
+      <include xmi:type="uml:Include" xmi:id="_q8J4kCCIEeibI6hNIvEtyw" addition="_nBahUCCIEeibI6hNIvEtyw"/>
+      <include xmi:type="uml:Include" xmi:id="_ryqCwCCIEeibI6hNIvEtyw" addition="_ohKc0CCIEeibI6hNIvEtyw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_mAaXUCCIEeibI6hNIvEtyw" memberEnd="_mAeBsCCIEeibI6hNIvEtyw _mAeowCCIEeibI6hNIvEtyw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_mAdaoCCIEeibI6hNIvEtyw" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_mAdaoSCIEeibI6hNIvEtyw" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_mAeBsCCIEeibI6hNIvEtyw" name="hook up to development ecosystem" type="_p8Ae8By-EeiwBo-ZUHL_uA" association="_mAaXUCCIEeibI6hNIvEtyw"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_mAeowCCIEeibI6hNIvEtyw" name="development environment" type="_SFEDMCCIEeibI6hNIvEtyw" association="_mAaXUCCIEeibI6hNIvEtyw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_nBahUCCIEeibI6hNIvEtyw" name="Program"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_ohKc0CCIEeibI6hNIvEtyw" name="Debug"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_xAwfUCCIEeibI6hNIvEtyw" name="Command LED brightness"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_57bUQCCIEeibI6hNIvEtyw" name="Monitor Operation Parameters"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_l1H34CCJEeibI6hNIvEtyw" name="Check remaining uptime"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_sPtVsCCJEeibI6hNIvEtyw" memberEnd="_sPt8wiCJEeibI6hNIvEtyw _sPt8wyCJEeibI6hNIvEtyw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_sPt8wCCJEeibI6hNIvEtyw" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_sPt8wSCJEeibI6hNIvEtyw" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_sPt8wiCJEeibI6hNIvEtyw" name="check remaining uptime" type="_l1H34CCJEeibI6hNIvEtyw" association="_sPtVsCCJEeibI6hNIvEtyw"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_sPt8wyCJEeibI6hNIvEtyw" type="_OMm9gByvEeiwBo-ZUHL_uA" association="_sPtVsCCJEeibI6hNIvEtyw"/>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_3ETnMByYEeiNjrdnSfHyBg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3EYfsByYEeiNjrdnSfHyBg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_3Ea78ByYEeiNjrdnSfHyBg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3Ea78RyYEeiNjrdnSfHyBg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//activities"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Activities"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_3EdYMByYEeiNjrdnSfHyBg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3Ed_QByYEeiNjrdnSfHyBg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//allocations"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Allocations"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_3Ed_QRyYEeiNjrdnSfHyBg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3Ed_QhyYEeiNjrdnSfHyBg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//blocks"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Blocks"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_3EemUByYEeiNjrdnSfHyBg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3EemURyYEeiNjrdnSfHyBg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//constraintblocks"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_ConstraintBlocks"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_3EemUhyYEeiNjrdnSfHyBg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3EfNYByYEeiNjrdnSfHyBg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//deprecatedelements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_DeprecatedElements"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_3EfNYRyYEeiNjrdnSfHyBg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3EfNYhyYEeiNjrdnSfHyBg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//modelelements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_ModelElements"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_3Ef0cByYEeiNjrdnSfHyBg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3Ef0cRyYEeiNjrdnSfHyBg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//portsandflows"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Ports_u0026Flows"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_3EgbgByYEeiNjrdnSfHyBg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3EhCkByYEeiNjrdnSfHyBg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//requirements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Requirements"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_3EhCkRyYEeiNjrdnSfHyBg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3EhpoByYEeiNjrdnSfHyBg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_QoQr8B7xEeiUY_wcbObuvA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_QoShIB7xEeiUY_wcbObuvA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+    </profileApplication>
+  </uml:Model>
+  <ModelElements:ElementGroup xmi:id="_D7-IQBy8EeiwBo-ZUHL_uA" base_Comment="_D74BoBy8EeiwBo-ZUHL_uA" name=""/>
+  <Requirements:Requirement xmi:id="_9_EQcB11EeilUPF6vycfPg" base_Class="_9-5RUB11EeilUPF6vycfPg" id="0001" text="Platform for development of mobile LED lamps in shape of a development board."/>
+  <Requirements:Requirement xmi:id="_xxttUB12EeilUPF6vycfPg" base_Class="_xxlKcB12EeilUPF6vycfPg" id="0101"/>
+  <Requirements:Requirement xmi:id="_0HJ6sB12EeilUPF6vycfPg" base_Class="_0HB-4B12EeilUPF6vycfPg" id="0102"/>
+  <Requirements:Requirement xmi:id="_9GPVkB12EeilUPF6vycfPg" base_Class="_9GHZwB12EeilUPF6vycfPg" id="0310"/>
+  <Requirements:Requirement xmi:id="_CzWCUB13EeilUPF6vycfPg" base_Class="_CzOtkB13EeilUPF6vycfPg" id="0308" text="This property was requested by potential customers but no concrete operating time was given."/>
+  <Requirements:Requirement xmi:id="_VJW-EB18EeilUPF6vycfPg" base_Class="_VJPpUB18EeilUPF6vycfPg" id="0301" text="Programmable BMS with debug capability"/>
+  <Requirements:Requirement xmi:id="_JI5ncB19EeilUPF6vycfPg" base_Class="_JIy5wB19EeilUPF6vycfPg" id="0401" text="Operation within the indended range of the components used"/>
+  <Requirements:Requirement xmi:id="_tIW4YB19EeilUPF6vycfPg" base_Class="_tIQxwB19EeilUPF6vycfPg" id="0604" text="Monitor upper and lower voltage levels and cut battery off if limits are violated."/>
+  <Requirements:Requirement xmi:id="_9d9bkB2CEeilUPF6vycfPg" base_Class="_9d2G0B2CEeilUPF6vycfPg" id="0506" text="Give an estimate of the remaining uptime while supplied by the accumulator."/>
+  <Requirements:Requirement xmi:id="_N2M_4B2EEeilUPF6vycfPg" base_Class="_N2FrIB2EEeilUPF6vycfPg" id="0606" text="Monitor charge and discharge current and cut battery if limits are violated."/>
+  <Requirements:DeriveReqt xmi:id="_aeYoYB2EEeilUPF6vycfPg" base_DirectedRelationship="_aeO3YB2EEeilUPF6vycfPg" base_Abstraction="_aeO3YB2EEeilUPF6vycfPg"/>
+  <Requirements:Requirement xmi:id="_gp8LsB2EEeilUPF6vycfPg" base_Class="_gpuJQB2EEeilUPF6vycfPg" id="0602" text="Monitor cell temperature and cut battery if limits are violated."/>
+  <Requirements:DeriveReqt xmi:id="_nd06UB2EEeilUPF6vycfPg" base_DirectedRelationship="_ndqiQB2EEeilUPF6vycfPg" base_Abstraction="_ndqiQB2EEeilUPF6vycfPg"/>
+  <Requirements:Requirement xmi:id="_yGds8B2EEeilUPF6vycfPg" base_Class="_yGW_QB2EEeilUPF6vycfPg" id="0609" text="Compatibility with wide range of cell chemistries: &#xD;&#xA;LCO, NMC, LMO, NCA, LFP"/>
+  <Requirements:Requirement xmi:id="_M7_k8B2FEeilUPF6vycfPg" base_Class="_M743QB2FEeilUPF6vycfPg" id="0304" text="The platform must be suitable for stationary (connected to non-mobile power source) and mobile (not connected to non-mobile power source) operation."/>
+  <Requirements:Requirement xmi:id="_wMoBAB2FEeilUPF6vycfPg" base_Class="_wMfeIB2FEeilUPF6vycfPg" id="0414" text="Minimum uptime of 30 min in mobile operation."/>
+  <Requirements:Requirement xmi:id="_R9GR4B2GEeilUPF6vycfPg" base_Class="_R9ALQB2GEeilUPF6vycfPg" id="0404" text="Seamless transition from stationary to mobile operation."/>
+  <Requirements:Requirement xmi:id="_PBoUYB2IEeilUPF6vycfPg" base_Class="_PBiNwB2IEeilUPF6vycfPg" id="0405" text="The platform requires a non-stationary power source for mobile operation."/>
+  <Requirements:Requirement xmi:id="_E6hsEB2JEeilUPF6vycfPg" base_Class="_E6blcB2JEeilUPF6vycfPg" id="0510" text="Mobile power shall be provided by a single LiPo cell"/>
+  <Requirements:Requirement xmi:id="_bu3KEB2KEeilUPF6vycfPg" base_Class="_buxDcB2KEeilUPF6vycfPg" id="0611" text="Maximise accumulator utilisation with a DOD ≥ 80 %"/>
+  <Requirements:Requirement xmi:id="_22g3YB2LEeilUPF6vycfPg" base_Class="_22awwB2LEeilUPF6vycfPg" id="0610" text="The accumulator must be swappable during stationary operation."/>
+  <Requirements:Requirement xmi:id="_H1KUYB2NEeilUPF6vycfPg" base_Class="_H1DmsB2NEeilUPF6vycfPg" id="0406" text="The platform requires an input for a power source during stationary operation with the ability to recharge the accumulator."/>
+  <Requirements:Requirement xmi:id="_g3OOMB2OEeilUPF6vycfPg" base_Class="_g3IHkB2OEeilUPF6vycfPg" id="0512" text="5 V / 1 A"/>
+  <Requirements:Refine xmi:id="_oH0G8B2OEeilUPF6vycfPg" base_DirectedRelationship="_oHtZQB2OEeilUPF6vycfPg" base_Abstraction="_oHtZQB2OEeilUPF6vycfPg"/>
+  <Requirements:Requirement xmi:id="_OV1hMB2PEeilUPF6vycfPg" base_Class="_OVvakB2PEeilUPF6vycfPg" id="0306" text="The platform is targeted for mobile lighting applications (e.g. torches) and shall include a power LED."/>
+  <Requirements:Requirement xmi:id="_b6eVcB2QEeilUPF6vycfPg" base_Class="_b6YO0B2QEeilUPF6vycfPg" id="0411" text="White with good colour reproduction"/>
+  <Requirements:Requirement xmi:id="_4Uh7QB2QEeilUPF6vycfPg" base_Class="_4Ub0oB2QEeilUPF6vycfPg" id="0409" text="The LED shall be dimmable."/>
+  <Requirements:Requirement xmi:id="_emASIB2REeilUPF6vycfPg" base_Class="_el6LgB2REeilUPF6vycfPg" id="0305" text="The platform should be compatible with the companies current appliences which can be used as a kind of expansion to the platform."/>
+  <Requirements:Requirement xmi:id="_emzmkB2VEeilUPF6vycfPg" base_Class="_ems44B2VEeilUPF6vycfPg" text="The platform shall integrate a charger for the accumulator. The accumulator is charged during connection to the stationary power power supply."/>
+  <Requirements:Requirement xmi:id="_y4ED0B2WEeilUPF6vycfPg" base_Class="_y399MB2WEeilUPF6vycfPg" id="0407" text="The expansion board shall be supplied with 5 V / 250 mA"/>
+  <Requirements:Requirement xmi:id="_W62DoB2ZEeilUPF6vycfPg" base_Class="_W6lk8B2ZEeilUPF6vycfPg" id="0408" text="Pinheader according to drawing"/>
+  <Requirements:Requirement xmi:id="_Jm-H4B2bEeilUPF6vycfPg" base_Class="_Jm3aMB2bEeilUPF6vycfPg" id="0511" text="Pinheader according to drawing"/>
+  <Requirements:Requirement xmi:id="_gKFIcB2bEeilUPF6vycfPg" base_Class="_gJ-awB2bEeilUPF6vycfPg" id="0508" text="Pinheader according to drawing"/>
+  <Requirements:Requirement xmi:id="_39tgQB2cEeilUPF6vycfPg" base_Class="_39mLgB2cEeilUPF6vycfPg" id="0302" text="The mechanical dimensions of the PCB are defined in the appended drawing."/>
+  <Requirements:Requirement xmi:id="_bAMuYB5oEei8pbjxkkJKTg" base_Class="_bAELgB5oEei8pbjxkkJKTg" id="0705" text="10 mV"/>
+  <Requirements:Requirement xmi:id="_H2yYEB5pEei8pbjxkkJKTg" base_Class="_H2rDUB5pEei8pbjxkkJKTg" id="0709" text="10 mA"/>
+  <Requirements:Requirement xmi:id="_uOkLQB5pEei8pbjxkkJKTg" base_Class="_uOcPcB5pEei8pbjxkkJKTg" id="0702" text="1°C"/>
+  <Requirements:Requirement xmi:id="_NJmgEB5qEei8pbjxkkJKTg" base_Class="_NJcvFR5qEei8pbjxkkJKTg" text="The accumulator must be swappable during stationary operation."/>
+  <Requirements:Requirement xmi:id="_NJ1JkB5qEei8pbjxkkJKTg" base_Class="_NJcvEx5qEei8pbjxkkJKTg" text="Compatibility with wide range of cell chemistries: &#xD;&#xA;LCO, NMC, LMO, NCA, LFP"/>
+  <Requirements:Requirement xmi:id="_NKB94B5qEei8pbjxkkJKTg" base_Class="_NJcvFB5qEei8pbjxkkJKTg" text="Maximise accumulator utilisation with a DOD ≥ 80 %"/>
+  <Requirements:Requirement xmi:id="_NKOyMB5qEei8pbjxkkJKTg" base_Class="_NJcvEB5qEei8pbjxkkJKTg" id="0509" text="The platform shall integrate a charger for the accumulator. The accumulator is charged during connection to the stationary power power supply."/>
+  <Requirements:Requirement xmi:id="_NKcNkB5qEei8pbjxkkJKTg" base_Class="_NJcvER5qEei8pbjxkkJKTg" text="The platform requires a non-stationary power source for mobile operation."/>
+  <Requirements:Requirement xmi:id="_NKqQAB5qEei8pbjxkkJKTg" base_Class="_NJcvFh5qEei8pbjxkkJKTg" text="Pinheader according to drawing"/>
+  <Requirements:Requirement xmi:id="_NK2dQB5qEei8pbjxkkJKTg" base_Class="_NJcvEh5qEei8pbjxkkJKTg"/>
+  <Requirements:DeriveReqt xmi:id="_sf9e8B5qEei8pbjxkkJKTg" base_DirectedRelationship="_sfwqoB5qEei8pbjxkkJKTg" base_Abstraction="_sfwqoB5qEei8pbjxkkJKTg"/>
+  <Requirements:Requirement xmi:id="_7I-E0B5sEei8pbjxkkJKTg" base_Class="_7I2wEB5sEei8pbjxkkJKTg" id="0608" text="Get Access to SOC information"/>
+  <Requirements:Refine xmi:id="_UIOiQB5uEei8pbjxkkJKTg" base_DirectedRelationship="_UIHNgB5uEei8pbjxkkJKTg" base_Abstraction="_UIHNgB5uEei8pbjxkkJKTg"/>
+  <Requirements:DeriveReqt xmi:id="_e0XU0B5uEei8pbjxkkJKTg" base_DirectedRelationship="_e0ROMB5uEei8pbjxkkJKTg" base_Abstraction="_e0ROMB5uEei8pbjxkkJKTg"/>
+  <Requirements:DeriveReqt xmi:id="_h4KdAB5uEei8pbjxkkJKTg" base_DirectedRelationship="_h4AE8B5uEei8pbjxkkJKTg" base_Abstraction="_h4AE8B5uEei8pbjxkkJKTg"/>
+  <Requirements:DeriveReqt xmi:id="_i_IFEB5uEei8pbjxkkJKTg" base_DirectedRelationship="_i_BXYB5uEei8pbjxkkJKTg" base_Abstraction="_i_BXYB5uEei8pbjxkkJKTg"/>
+  <Requirements:DeriveReqt xmi:id="_u7S8IB5uEei8pbjxkkJKTg" base_DirectedRelationship="_u7LAUB5uEei8pbjxkkJKTg" base_Abstraction="_u7LAUB5uEei8pbjxkkJKTg"/>
+  <Requirements:DeriveReqt xmi:id="_wHC9kB5uEei8pbjxkkJKTg" base_DirectedRelationship="_wG4lgB5uEei8pbjxkkJKTg" base_Abstraction="_wG4lgB5uEei8pbjxkkJKTg"/>
+  <Requirements:Requirement xmi:id="_c1uBYB5vEei8pbjxkkJKTg" base_Class="_c1nTsB5vEei8pbjxkkJKTg" id="0801" text="Boost conversion is required to generate 3.3 V from single cell accumulator"/>
+  <Requirements:Requirement xmi:id="_xBTJ4B5vEei8pbjxkkJKTg" base_Class="_xBMcMB5vEei8pbjxkkJKTg" id="0515" text="LED-Driver providing sufficient voltage and current to the LED"/>
+  <Requirements:Requirement xmi:id="_SRbGwB5wEei8pbjxkkJKTg" base_Class="_SRVAIB5wEei8pbjxkkJKTg" id="0410" text="500 lm"/>
+  <Requirements:DeriveReqt xmi:id="_ZvrBAB5wEei8pbjxkkJKTg" base_DirectedRelationship="_ZveMsB5wEei8pbjxkkJKTg" base_Abstraction="_ZveMsB5wEei8pbjxkkJKTg"/>
+  <Requirements:DeriveReqt xmi:id="_gyx3YB5wEei8pbjxkkJKTg" base_DirectedRelationship="_gynfUB5wEei8pbjxkkJKTg" base_Abstraction="_gynfUB5wEei8pbjxkkJKTg"/>
+  <Requirements:DeriveReqt xmi:id="_ih_yQB5wEei8pbjxkkJKTg" base_DirectedRelationship="_ih5EkB5wEei8pbjxkkJKTg" base_Abstraction="_ih5EkB5wEei8pbjxkkJKTg"/>
+  <Requirements:Requirement xmi:id="_cVXlkB7sEeiUY_wcbObuvA" base_Class="_cVHt8B7sEeiUY_wcbObuvA" id="0711" text="2.5 - 4.2 V"/>
+  <Requirements:DeriveReqt xmi:id="_ey-3gB7sEeiUY_wcbObuvA" base_DirectedRelationship="_eyuY0B7sEeiUY_wcbObuvA" base_Abstraction="_eyuY0B7sEeiUY_wcbObuvA"/>
+  <Blocks:Block xmi:id="_U5L18B7uEeiUY_wcbObuvA" base_Class="_U5DTEB7uEeiUY_wcbObuvA"/>
+  <Blocks:Block xmi:id="_WIbQQB7uEeiUY_wcbObuvA" base_Class="_WIStYB7uEeiUY_wcbObuvA"/>
+  <Blocks:Block xmi:id="_WSQhsB7uEeiUY_wcbObuvA" base_Class="_WSH-0B7uEeiUY_wcbObuvA"/>
+  <Blocks:Block xmi:id="_WdW-cB7uEeiUY_wcbObuvA" base_Class="_WdQQwB7uEeiUY_wcbObuvA"/>
+  <Blocks:Block xmi:id="_AzfdkB7vEeiUY_wcbObuvA" base_Class="_AzYv4B7vEeiUY_wcbObuvA"/>
+  <Blocks:Block xmi:id="_A87GYB7vEeiUY_wcbObuvA" base_Class="_A80YsB7vEeiUY_wcbObuvA"/>
+  <Blocks:Block xmi:id="_BEREgB7vEeiUY_wcbObuvA" base_Class="_BEJvwB7vEeiUY_wcbObuvA"/>
+  <Blocks:Block xmi:id="_-fGjoB7vEeiUY_wcbObuvA" base_Class="_-e_O4B7vEeiUY_wcbObuvA"/>
+  <Blocks:Block xmi:id="_tGU48B76EeiUY_wcbObuvA" base_Class="_tGNkMB76EeiUY_wcbObuvA"/>
+  <Blocks:Block xmi:id="_DbuMoB8GEeiUY_wcbObuvA" base_Class="_Dbm34B8GEeiUY_wcbObuvA"/>
+  <Requirements:Requirement xmi:id="_CefnsCBsEeibI6hNIvEtyw" base_Class="_CeAfgCBsEeibI6hNIvEtyw" id="0710" text="-2.0 - +2.0 A"/>
+  <Requirements:Requirement xmi:id="_DBRkoCBsEeibI6hNIvEtyw" base_Class="_DBBF8CBsEeibI6hNIvEtyw" id="0708" text="1kHz"/>
+  <Requirements:Requirement xmi:id="_DWPIACBsEeibI6hNIvEtyw" base_Class="_DWBsoCBsEeibI6hNIvEtyw" id="0707" text="2.3 - 4.4 V"/>
+  <Requirements:Requirement xmi:id="_Mn4SgCBsEeibI6hNIvEtyw" base_Class="_MnreMCBsEeibI6hNIvEtyw" id="0704" text="1 kHz"/>
+  <Requirements:Requirement xmi:id="_M6V7gCBsEeibI6hNIvEtyw" base_Class="_M6JuQCBsEeibI6hNIvEtyw" id="0703" text="-20 - 60°C"/>
+  <Requirements:Requirement xmi:id="_NKNjgCBsEeibI6hNIvEtyw" base_Class="_NKAvMCBsEeibI6hNIvEtyw" id="0701" text="1 Hz"/>
+  <Requirements:DeriveReqt xmi:id="_g1L5UCBsEeibI6hNIvEtyw" base_DirectedRelationship="_g1CIUCBsEeibI6hNIvEtyw" base_Abstraction="_g1CIUCBsEeibI6hNIvEtyw"/>
+  <Requirements:DeriveReqt xmi:id="_htG_0CBsEeibI6hNIvEtyw" base_DirectedRelationship="_hs6ykCBsEeibI6hNIvEtyw" base_Abstraction="_hs6ykCBsEeibI6hNIvEtyw"/>
+  <Requirements:DeriveReqt xmi:id="_ihYVYCBsEeibI6hNIvEtyw" base_DirectedRelationship="_ihQZkCBsEeibI6hNIvEtyw" base_Abstraction="_ihQZkCBsEeibI6hNIvEtyw"/>
+  <Requirements:DeriveReqt xmi:id="_jh9BkCBsEeibI6hNIvEtyw" base_DirectedRelationship="_jhz3oCBsEeibI6hNIvEtyw" base_Abstraction="_jhz3oCBsEeibI6hNIvEtyw"/>
+  <Requirements:DeriveReqt xmi:id="_kUNk8CBsEeibI6hNIvEtyw" base_DirectedRelationship="_kUGQMCBsEeibI6hNIvEtyw" base_Abstraction="_kUGQMCBsEeibI6hNIvEtyw"/>
+  <Requirements:DeriveReqt xmi:id="_yqef4CBsEeibI6hNIvEtyw" base_DirectedRelationship="_yqV9ACBsEeibI6hNIvEtyw" base_Abstraction="_yqV9ACBsEeibI6hNIvEtyw"/>
+  <Requirements:DeriveReqt xmi:id="_vINdkCBtEeibI6hNIvEtyw" base_DirectedRelationship="_vIFhwCBtEeibI6hNIvEtyw" base_Abstraction="_vIFhwCBtEeibI6hNIvEtyw"/>
+  <Requirements:DeriveReqt xmi:id="_HJg6cCBuEeibI6hNIvEtyw" base_DirectedRelationship="_HJXJcCBuEeibI6hNIvEtyw" base_Abstraction="_HJXJcCBuEeibI6hNIvEtyw"/>
+  <Requirements:DeriveReqt xmi:id="_JVY8ICBuEeibI6hNIvEtyw" base_DirectedRelationship="_JVRAUCBuEeibI6hNIvEtyw" base_Abstraction="_JVRAUCBuEeibI6hNIvEtyw"/>
+  <Requirements:Requirement xmi:id="_Q5K2oCBuEeibI6hNIvEtyw" base_Class="_Q4-pYCBuEeibI6hNIvEtyw" id="0607" text="10%"/>
+  <Requirements:DeriveReqt xmi:id="_dFC9oCBuEeibI6hNIvEtyw" base_DirectedRelationship="_dE4lkCBuEeibI6hNIvEtyw" base_Abstraction="_dE4lkCBuEeibI6hNIvEtyw"/>
+  <Requirements:DeriveReqt xmi:id="_GiikkCBvEeibI6hNIvEtyw" base_DirectedRelationship="_GiaowCBvEeibI6hNIvEtyw" base_Abstraction="_GiaowCBvEeibI6hNIvEtyw"/>
+  <Requirements:DeriveReqt xmi:id="_IHDrUCBvEeibI6hNIvEtyw" base_DirectedRelationship="_IG7vgCBvEeibI6hNIvEtyw" base_Abstraction="_IG7vgCBvEeibI6hNIvEtyw"/>
+  <Requirements:Requirement xmi:id="_cFJxcCBvEeibI6hNIvEtyw" base_Class="_cFB1oCBvEeibI6hNIvEtyw" id="0503"/>
+  <Requirements:Requirement xmi:id="_cbvFcCBvEeibI6hNIvEtyw" base_Class="_cbmikCBvEeibI6hNIvEtyw" id="0504"/>
+  <Requirements:Requirement xmi:id="_czHDoCBvEeibI6hNIvEtyw" base_Class="_cy_H0CBvEeibI6hNIvEtyw" id="0505"/>
+  <Requirements:DeriveReqt xmi:id="_tfm2ICBvEeibI6hNIvEtyw" base_DirectedRelationship="_tfeTQCBvEeibI6hNIvEtyw" base_Abstraction="_tfeTQCBvEeibI6hNIvEtyw"/>
+  <Requirements:DeriveReqt xmi:id="_uUJ4gCBvEeibI6hNIvEtyw" base_DirectedRelationship="_uUCjwCBvEeibI6hNIvEtyw" base_Abstraction="_uUCjwCBvEeibI6hNIvEtyw"/>
+  <Requirements:DeriveReqt xmi:id="_u4qTwCBvEeibI6hNIvEtyw" base_DirectedRelationship="_u4jmECBvEeibI6hNIvEtyw" base_Abstraction="_u4jmECBvEeibI6hNIvEtyw"/>
+  <Requirements:Requirement xmi:id="_y56isCBvEeibI6hNIvEtyw" base_Class="_y5ym4CBvEeibI6hNIvEtyw" id="0601" text="0-45°C Charge; -20 -60°C Discharge"/>
+  <Requirements:Requirement xmi:id="_zLbwgCBvEeibI6hNIvEtyw" base_Class="_zLT0sCBvEeibI6hNIvEtyw" id="0603" text="Cell type dependent configurable Overvoltage and Underfoltage protection"/>
+  <Requirements:Requirement xmi:id="_0bnmACBvEeibI6hNIvEtyw" base_Class="_0bfDICBvEeibI6hNIvEtyw" id="0605" text="Depends on hardware"/>
+  <Requirements:DeriveReqt xmi:id="_5L8hcCBvEeibI6hNIvEtyw" base_DirectedRelationship="_5L1MsCBvEeibI6hNIvEtyw" base_Abstraction="_5L1MsCBvEeibI6hNIvEtyw"/>
+  <Requirements:DeriveReqt xmi:id="_5_znUCBvEeibI6hNIvEtyw" base_DirectedRelationship="_5_oBICBvEeibI6hNIvEtyw" base_Abstraction="_5_oBICBvEeibI6hNIvEtyw"/>
+  <Requirements:DeriveReqt xmi:id="_6i5GQCBvEeibI6hNIvEtyw" base_DirectedRelationship="_6iwjYCBvEeibI6hNIvEtyw" base_Abstraction="_6iwjYCBvEeibI6hNIvEtyw"/>
+  <Requirements:Requirement xmi:id="_afRt4CBxEeibI6hNIvEtyw" base_Class="_afIj8CBxEeibI6hNIvEtyw" id="0402" text="80 x 90 mm"/>
+  <Requirements:Requirement xmi:id="_au4QICBxEeibI6hNIvEtyw" base_Class="_auvGMCBxEeibI6hNIvEtyw" id="0403" text="Mounting Holes M4 according to drawing"/>
+  <Requirements:Requirement xmi:id="_Ickg8CByEeibI6hNIvEtyw" base_Class="_IcYTsCByEeibI6hNIvEtyw" id="0502" text="Brings system to a safe state"/>
+  <Requirements:DeriveReqt xmi:id="_SxUHMCByEeibI6hNIvEtyw" base_DirectedRelationship="_SxMycCByEeibI6hNIvEtyw" base_Abstraction="_SxMycCByEeibI6hNIvEtyw"/>
+  <Requirements:Requirement xmi:id="_slah8CBzEeibI6hNIvEtyw" base_Class="_slRYACBzEeibI6hNIvEtyw" id="0507" text="Placing components on PCB will be restricted by mounting points and dimensions"/>
+  <Requirements:DeriveReqt xmi:id="_ws0cMCBzEeibI6hNIvEtyw" base_DirectedRelationship="_wstHcCBzEeibI6hNIvEtyw" base_Abstraction="_wstHcCBzEeibI6hNIvEtyw"/>
+  <Requirements:DeriveReqt xmi:id="_zzy0MCBzEeibI6hNIvEtyw" base_DirectedRelationship="_zzrfcCBzEeibI6hNIvEtyw" base_Abstraction="_zzrfcCBzEeibI6hNIvEtyw"/>
+  <Requirements:DeriveReqt xmi:id="_n7U78CB0EeibI6hNIvEtyw" base_DirectedRelationship="_n7NnMCB0EeibI6hNIvEtyw" base_Abstraction="_n7NnMCB0EeibI6hNIvEtyw"/>
+  <Requirements:Requirement xmi:id="_-0MKECB0EeibI6hNIvEtyw" base_Class="_-0EOQCB0EeibI6hNIvEtyw" id="0712" text="Configurable during operation"/>
+  <Requirements:DeriveReqt xmi:id="_DJmrICB1EeibI6hNIvEtyw" base_DirectedRelationship="_DJevUCB1EeibI6hNIvEtyw" base_Abstraction="_DJevUCB1EeibI6hNIvEtyw"/>
+  <Requirements:DeriveReqt xmi:id="_FuFaECB1EeibI6hNIvEtyw" base_DirectedRelationship="_Ft-FUCB1EeibI6hNIvEtyw" base_Abstraction="_Ft-FUCB1EeibI6hNIvEtyw"/>
+  <Requirements:Requirement xmi:id="_fAcPICB1EeibI6hNIvEtyw" base_Class="_fAUTUCB1EeibI6hNIvEtyw" id="0514" text="SPI / UART / I2C"/>
+  <Requirements:DeriveReqt xmi:id="_iGgBICB1EeibI6hNIvEtyw" base_DirectedRelationship="_iGYsYCB1EeibI6hNIvEtyw" base_Abstraction="_iGYsYCB1EeibI6hNIvEtyw"/>
+  <Requirements:Requirement xmi:id="_pjiacCB1EeibI6hNIvEtyw" base_Class="_pjbFsCB1EeibI6hNIvEtyw" id="0513" text="9 GPIOs and 2 ADC inputs shall be provided"/>
+  <Requirements:DeriveReqt xmi:id="_t7YkcCB1EeibI6hNIvEtyw" base_DirectedRelationship="_t7QooCB1EeibI6hNIvEtyw" base_Abstraction="_t7QooCB1EeibI6hNIvEtyw"/>
+  <Requirements:Requirement xmi:id="_g331YCB2EeibI6hNIvEtyw" base_Class="_g3sPMCB2EeibI6hNIvEtyw" id="0307" text="Proper function within specified range"/>
+  <Requirements:Requirement xmi:id="_jDCscCB2EeibI6hNIvEtyw" base_Class="_jC3GQCB2EeibI6hNIvEtyw" id="0412" text="10 -30°C"/>
+  <Requirements:Requirement xmi:id="_jSGcICB2EeibI6hNIvEtyw" base_Class="_jR8rICB2EeibI6hNIvEtyw" id="0413" text="0-95%"/>
+  <Requirements:DeriveReqt xmi:id="_zCiPACB2EeibI6hNIvEtyw" base_DirectedRelationship="_zCa6QCB2EeibI6hNIvEtyw" base_Abstraction="_zCa6QCB2EeibI6hNIvEtyw"/>
+  <Requirements:DeriveReqt xmi:id="_zggkcCB2EeibI6hNIvEtyw" base_DirectedRelationship="_zgWzcCB2EeibI6hNIvEtyw" base_Abstraction="_zgWzcCB2EeibI6hNIvEtyw"/>
+  <Requirements:Requirement xmi:id="_Nc4m4CB3EeibI6hNIvEtyw" base_Class="_Ncu14CB3EeibI6hNIvEtyw" id="0501" text="Protection in case of reverse polarity"/>
+  <Requirements:DeriveReqt xmi:id="_SrRXUCB3EeibI6hNIvEtyw" base_DirectedRelationship="_SrINYCB3EeibI6hNIvEtyw" base_Abstraction="_SrINYCB3EeibI6hNIvEtyw"/>
+  <Requirements:Requirement xmi:id="_0FvjACB3EeibI6hNIvEtyw" base_Class="_0FnAICB3EeibI6hNIvEtyw" id="0309" text="Bourd will be used for development"/>
+  <Requirements:Requirement xmi:id="_0SLcgCB3EeibI6hNIvEtyw" base_Class="_0SEHwCB3EeibI6hNIvEtyw" id="0415" text="Some kind of API shall be provided to the Developer"/>
+  <Requirements:DeriveReqt xmi:id="_6_lvsCB3EeibI6hNIvEtyw" base_DirectedRelationship="_6_UC4CB3EeibI6hNIvEtyw" base_Abstraction="_6_UC4CB3EeibI6hNIvEtyw"/>
+  <Requirements:Requirement xmi:id="_JzAgsCB4EeibI6hNIvEtyw" base_Class="_Jy5L8CB4EeibI6hNIvEtyw" id="0416" text="Some kind of debugging should be possible"/>
+  <Requirements:DeriveReqt xmi:id="_SZ5eACB4EeibI6hNIvEtyw" base_DirectedRelationship="_SZxiMCB4EeibI6hNIvEtyw" base_Abstraction="_SZxiMCB4EeibI6hNIvEtyw"/>
+  <Requirements:Requirement xmi:id="_svLIoCB4EeibI6hNIvEtyw" base_Class="_svDz4CB4EeibI6hNIvEtyw" id="0612" text="Input range 0 - 3.3 V; Protection should be provided"/>
+  <Requirements:Refine xmi:id="_xT1moCB4EeibI6hNIvEtyw" base_DirectedRelationship="_xTtq0CB4EeibI6hNIvEtyw" base_Abstraction="_xTtq0CB4EeibI6hNIvEtyw"/>
+</xmi:XMI>
