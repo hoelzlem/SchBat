@@ -1,0 +1,5 @@
+*.pptx binary
+*.jpg binary
+*.png binary
+
+draw.io/*.xml binary
