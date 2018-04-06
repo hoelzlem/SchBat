@@ -1,0 +1,4 @@
+# MPLAB X project and config files
+**/nbproject/** binary
+**/Makefile binary
+**/MyConfig.mc3 binary
